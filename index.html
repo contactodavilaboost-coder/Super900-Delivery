@@ -117,12 +117,9 @@
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex">
 <!-- SideNavBar (Desktop) -->
 <nav class="hidden flex-col h-screen p-base fixed left-0 z-40 w-64 bg-surface-container dark:bg-surface-container-high shadow-xl border-r border-glass-border lg:flex">
-<div class="p-4 flex items-center gap-4 mb-8"><img alt="Super900 Logo" class="h-12 object-contain mb-2" src="image.png"/></div>
+<div class="p-4 flex items-center gap-4 mb-8"><a href="index.html"><img alt="Super900 Logo" class="h-12 object-contain mb-2" src="image.png"/></a></div>
 <div class="flex-1 space-y-2">
-<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold" href="index.html">
-<span class="material-symbols-outlined fill">storefront</span>
-<span class="font-label-md text-label-md">Tienda</span>
-</a>
+
 <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-variant transition-all hover:bg-surface-variant/50" href="bebidas.html">
 <span class="material-symbols-outlined">local_bar</span>
 <span class="font-label-md text-label-md">Bebidas</span>
@@ -147,7 +144,7 @@
 <!-- TopNavBar (Mobile) -->
 <header class="lg:hidden sticky top-0 flex justify-between items-center w-full px-margin-mobile py-4 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-glass-border shadow-md dark:shadow-none docked full-width top-0 z-50">
 <div class="flex items-center">
-<img alt="Super900 Logo" class="h-8 object-contain" src="image.png"/>
+<a href="index.html"><img alt="Super900 Logo" class="h-8 object-contain" src="image.png"/></a>
 </div>
 <div class="flex items-center space-x-4">
 <button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
@@ -341,10 +338,7 @@
 </main>
 <!-- BottomNavBar (Mobile) -->
 <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 lg:hidden bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-glass-border shadow-[0_-4px_12px_rgba(0,0,0,0.5)] rounded-t-xl">
-<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-110 transition-transform" href="index.html">
-<span class="material-symbols-outlined fill">storefront</span>
-<span class="font-label-sm text-label-sm mt-1">Tienda</span>
-</a>
+
 <a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1" href="#">
 <span class="material-symbols-outlined">search</span>
 <span class="font-label-sm text-label-sm mt-1">Buscar</span>
