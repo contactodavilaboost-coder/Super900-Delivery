@@ -3,304 +3,324 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Carnes - Super900</title>
+<title>Super900 - Carnes Premium</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container": "#1e2020",
-                        "success-green": "#28C76F",
-                        "surface-container-low": "#1a1c1c",
-                        "on-error": "#690005",
-                        "tertiary": "#bac7e3",
-                        "outline-variant": "#434751",
-                        "inverse-surface": "#e2e2e2",
-                        "deep-black": "#000000",
-                        "on-background": "#e2e2e2",
-                        "tertiary-fixed": "#d6e3ff",
-                        "primary-fixed-dim": "#acc7ff",
-                        "on-primary-fixed-variant": "#0f458b",
-                        "on-secondary-fixed-variant": "#673d00",
-                        "error": "#ffb4ab",
-                        "secondary-fixed-dim": "#ffb866",
-                        "on-secondary-fixed": "#2b1700",
-                        "background": "#121414",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "surface-tint": "#acc7ff",
-                        "surface-variant": "#333535",
-                        "surface-container-lowest": "#0c0f0f",
-                        "surface": "#121414",
-                        "surface-container-high": "#282a2b",
-                        "inverse-primary": "#315da5",
-                        "tertiary-fixed-dim": "#bac7e3",
-                        "on-primary-fixed": "#001a40",
-                        "on-tertiary": "#243147",
-                        "surface-bright": "#37393a",
-                        "primary": "#acc7ff",
-                        "error-container": "#93000a",
-                        "primary-container": "#003e84",
-                        "on-secondary": "#482900",
-                        "on-tertiary-fixed": "#0e1c31",
-                        "surface-container-highest": "#333535",
-                        "on-error-container": "#ffdad6",
-                        "glass-border": "rgba(255, 255, 255, 0.12)",
-                        "on-surface-variant": "#c3c6d2",
-                        "on-surface": "#e2e2e2",
-                        "outline": "#8d909c",
-                        "charcoal-surface": "#121212",
-                        "secondary": "#ffb866",
-                        "surface-dim": "#121414",
-                        "tertiary-container": "#334057",
-                        "secondary-container": "#f19700",
-                        "on-tertiary-container": "#9facc7",
-                        "on-secondary-container": "#5d3700",
-                        "primary-fixed": "#d7e2ff",
-                        "on-primary-container": "#83acf9",
-                        "inverse-on-surface": "#2f3131",
-                        "secondary-fixed": "#ffddba",
-                        "on-primary": "#002f67",
-                        "error-red": "#EA5455"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter-mobile": "16px",
-                        "gutter-desktop": "24px",
-                        "base": "8px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "40px",
-                        "container-max-width": "1280px"
-                    },
-                    "fontFamily": {
-                        "label-md": ["Inter"],
-                        "display-lg": ["Montserrat"],
-                        "label-sm": ["Inter"],
-                        "headline-md": ["Montserrat"],
-                        "headline-lg-mobile": ["Montserrat"],
-                        "body-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "headline-lg": ["Montserrat"]
-                    },
-                    "fontSize": {
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
-                    }
-                }
-            }
-        }
-    </script>
 <style>
-        body {
-            background-color: #121414; /* background color */
-            color: #e2e2e2; /* on-background color */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        /* Hide scrollbar for clean look */
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom scrollbar for premium feel */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #121414;
+            background: #121414; 
         }
         ::-webkit-scrollbar-thumb {
-            background: #333535;
+            background: #333535; 
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #434751;
+            background: #434751; 
         }
     </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#1e2020",
+                    "success-green": "#28C76F",
+                    "surface-container-low": "#1a1c1c",
+                    "on-error": "#690005",
+                    "tertiary": "#bac7e3",
+                    "outline-variant": "#434751",
+                    "inverse-surface": "#e2e2e2",
+                    "deep-black": "#000000",
+                    "on-background": "#e2e2e2",
+                    "tertiary-fixed": "#d6e3ff",
+                    "primary-fixed-dim": "#acc7ff",
+                    "on-primary-fixed-variant": "#0f458b",
+                    "on-secondary-fixed-variant": "#673d00",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#ffb866",
+                    "on-secondary-fixed": "#2b1700",
+                    "background": "#121414",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "surface-tint": "#acc7ff",
+                    "surface-variant": "#333535",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface": "#121414",
+                    "surface-container-high": "#282a2b",
+                    "inverse-primary": "#315da5",
+                    "tertiary-fixed-dim": "#bac7e3",
+                    "on-primary-fixed": "#001a40",
+                    "on-tertiary": "#243147",
+                    "surface-bright": "#37393a",
+                    "primary": "#acc7ff",
+                    "error-container": "#93000a",
+                    "primary-container": "#003e84",
+                    "on-secondary": "#482900",
+                    "on-tertiary-fixed": "#0e1c31",
+                    "surface-container-highest": "#333535",
+                    "on-error-container": "#ffdad6",
+                    "glass-border": "rgba(255, 255, 255, 0.12)",
+                    "on-surface-variant": "#c3c6d2",
+                    "on-surface": "#e2e2e2",
+                    "outline": "#8d909c",
+                    "charcoal-surface": "#121212",
+                    "secondary": "#ffb866",
+                    "surface-dim": "#121414",
+                    "tertiary-container": "#334057",
+                    "secondary-container": "#f19700",
+                    "on-tertiary-container": "#9facc7",
+                    "on-secondary-container": "#5d3700",
+                    "primary-fixed": "#d7e2ff",
+                    "on-primary-container": "#83acf9",
+                    "inverse-on-surface": "#2f3131",
+                    "secondary-fixed": "#ffddba",
+                    "on-primary": "#002f67",
+                    "error-red": "#EA5455"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-mobile": "16px",
+                    "gutter-desktop": "24px",
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "40px",
+                    "container-max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body class="antialiased min-h-screen flex flex-col md:flex-row">
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex selection:bg-primary-container selection:text-on-primary-container">
 <!-- SideNavBar (Desktop) -->
-<nav class="hidden lg:flex flex-col h-screen p-base fixed left-0 z-40 bg-surface-container dark:bg-surface-container-high border-r border-glass-border shadow-xl w-64 top-0">
+<aside class="hidden lg:flex flex-col h-screen p-base fixed left-0 z-40 w-64 bg-surface-container dark:bg-surface-container-high border-r border-glass-border shadow-xl">
 <div class="mb-8 mt-4 px-4"><a href="index.html"><img alt="Super900 Logo" class="h-12 object-contain mb-2" src="image.png"/></a></div>
-<div class="flex-grow space-y-2 px-2"><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="bebidas.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">local_bar</span><span class="font-label-md text-label-md">Bebidas</span></a><a class="flex items-center space-x-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-all" href="carnes.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span><span class="font-label-md text-label-md">Carnes</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="verduras.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span><span class="font-label-md text-label-md">Verduras</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="despensa.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">fastfood</span><span class="font-label-md text-label-md">Snacks</span></a></div>
-<div class="mt-auto px-2 space-y-2 mb-4"><button class="w-full py-3 px-4 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg hover:bg-primary-fixed transition-colors">Ver Ofertas</button><hr class="border-glass-border my-4"/><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="checkout.html"><span class="material-symbols-outlined">receipt_long</span><span class="font-label-md text-label-md">Mis Pedidos</span></a><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span><span class="font-label-md text-label-md">Soporte</span></a></div>
-</nav>
+<nav class="flex-1 space-y-2"><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="bebidas.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">local_bar</span><span class="font-label-md text-label-md">Bebidas</span></a><a class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold" href="carnes.html"><span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 0;">restaurant</span><span class="font-label-md text-label-md">Carnes</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="verduras.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span><span class="font-label-md text-label-md">Verduras</span></a><a class="flex items-center space-x-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-all" href="despensa.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fastfood</span><span class="font-label-md text-label-md">Snacks</span></a></nav>
+<div class="mt-auto pt-8 border-t border-glass-border space-y-2"><button class="w-full py-3 px-4 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg hover:bg-primary-fixed transition-colors">Ver Ofertas</button><hr class="border-glass-border my-4"/><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="checkout.html"><span class="material-symbols-outlined">receipt_long</span><span class="font-label-md text-label-md">Mis Pedidos</span></a><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span><span class="font-label-md text-label-md">Soporte</span></a></div>
+</aside>
 <!-- Main Content Wrapper -->
-<div class="flex-1 lg:ml-64 flex flex-col min-h-screen">
-<!-- TopNavBar (Mobile) -->
-<header class="lg:hidden sticky top-0 flex justify-between items-center w-full px-margin-mobile py-4 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-glass-border shadow-md dark:shadow-none docked full-width top-0 z-50">
-<div class="flex items-center">
-<a href="index.html"><img alt="Super900 Logo" class="h-8 object-contain" src="image.png"/></a>
-</div>
-<div class="flex items-center space-x-4">
-<button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
-<span class="material-symbols-outlined">search</span>
+<div class="flex-1 flex flex-col min-w-0 lg:ml-64 relative">
+<!-- TopNavBar (Responsive) -->
+<header class="sticky top-0 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-glass-border shadow-md dark:shadow-none docked full-width">
+<div class="flex items-center gap-4">
+<!-- Mobile Menu Button (Shows only on mobile) -->
+<button class="lg:hidden text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined">menu</span>
 </button>
-<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 relative">
+<div class="lg:hidden font-headline-md text-headline-md text-secondary font-bold"><a href="index.html"><img alt="Super900 Logo" class="h-8 object-contain" src="image.png"/></a></div>
+<!-- Search Bar (High visibility glassmorphic input) -->
+<div class="hidden md:flex relative group ml-4 lg:ml-0">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors">search</span>
+<input class="w-64 lg:w-96 bg-surface-container-high/50 border border-glass-border rounded-full py-2 pl-10 pr-4 text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 focus:bg-surface-container shadow-inner transition-all placeholder:text-outline" placeholder="Buscar en carnes..." type="text"/>
+</div>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-2 md:space-x-4 text-on-surface-variant dark:text-on-surface-variant">
+<button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined">location_on</span>
+</button>
+<button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50 relative bg-surface-variant/30 text-primary">
 <span class="material-symbols-outlined">shopping_cart</span>
 <span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
 </button>
 </div>
 </header>
-<!-- Desktop Top App Bar (Search & Actions only, since nav is side) -->
-<header class="hidden lg:flex sticky top-0 justify-between items-center w-full px-margin-desktop py-4 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-glass-border">
-<div class="flex-1 max-w-xl">
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-<input class="w-full bg-surface-container border border-glass-border rounded-full py-2.5 pl-10 pr-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/50" placeholder="Buscar cortes, pollo, embutidos..." type="text"/>
-</div>
-</div>
-<div class="flex items-center gap-4 ml-6">
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant/50">
-<span class="material-symbols-outlined">location_on</span>
-</button>
-<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant/50 relative">
-<span class="material-symbols-outlined">shopping_cart</span>
-<span class="absolute top-0 right-0 w-4 h-4 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold flex items-center justify-center">3</span>
-</button>
-</div>
-</header>
 <!-- Main Canvas -->
-<main class="flex-1 px-margin-mobile lg:px-margin-desktop py-8 pb-32 lg:pb-12 max-w-container-max-width mx-auto w-full">
-<!-- Page Header -->
-<div class="px-margin-mobile lg:px-margin-desktop pt-8 pb-6 bg-gradient-to-b from-surface-container-high to-background mb-10">
-<h2 class="font-headline-lg-mobile lg:font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface mb-2 font-display-lg">Carnes Premium</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Cortes selectos, frescura garantizada para tus mejores platillos.</p>
+<main class="flex-1 pb-24 lg:pb-12 px-gutter-mobile md:px-gutter-desktop pt-8 max-w-container-max-width mx-auto w-full">
+<!-- Hero Section -->
+<section class="relative w-full rounded-2xl overflow-hidden mb-12 h-[240px] md:h-[320px] flex items-end p-8 border border-glass-border shadow-2xl">
+<!-- Premium Background Image generated by AI -->
+<div class="absolute inset-0 bg-deep-black z-0">
+<img alt="Supermarket Aisles" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A meticulously organized, high-end supermarket pantry aisle captured in a moody, cinematic 'lights out' aesthetic. The scene features dark charcoal shelving softly illuminated by recessed, cool-toned LED strip lights. Rows of premium glass jars containing artisanal coffee beans, sleek matte black snack packaging, and sophisticated dark-themed pantry goods are arranged with perfect precision. The ambient lighting emphasizes deep shadows and glassmorphic reflections, creating a luxurious, minimalist, and highly curated grocery shopping environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByXjPPGmiLzUIlNbRqHt_q9YRanv5ydPyr_qEvwAmxBzzSWqGR3PRIdQWEuRU2lMT1bdZFLcVPlkMYIVUB-XC4XYC-2i4mAQhbD_NpHIh3wQZF5astKz9XcoPmKy0kLj2pw8UU7pm-lUIpzsn_quxY2AcQYWcFiYFmLOYUcqJ9FIo6ZGCo2iQ4I8DM_GcrmrWZ62XKfA38VKFwcxgsno3yXpW4PjcpQ5Gm6yQIK_7ixSYvu4Lk47u7pt3R-6o_XUdPdlr3qBD64QE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
 </div>
-<!-- Filters Section -->
-<div class="flex flex-col md:flex-row gap-4 mb-8">
-<!-- Type Filter -->
-<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide flex-1">
-<button class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold whitespace-nowrap shadow-[0_0_15px_rgba(172,199,255,0.2)] border border-primary">
-                        Todos
-                    </button>
-<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface border border-glass-border hover:border-outline-variant font-label-md text-label-md transition-colors whitespace-nowrap">
-                        Res
-                    </button>
-<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface border border-glass-border hover:border-outline-variant font-label-md text-label-md transition-colors whitespace-nowrap">
-                        Cerdo
-                    </button>
-<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface border border-glass-border hover:border-outline-variant font-label-md text-label-md transition-colors whitespace-nowrap">
-                        Pollo
-                    </button>
-<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface border border-glass-border hover:border-outline-variant font-label-md text-label-md transition-colors whitespace-nowrap">
-                        Embutidos
-                    </button>
+<div class="relative z-10 w-full max-w-3xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2 block">Categoría Premium</span>
+<h2 class="font-display-lg text-display-lg md:text-[56px] md:leading-[64px] text-inverse-surface mb-4">Carnes Premium</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Descubra nuestra colección curada de productos no perecederos, snacks artesanales y el mejor café de especialidad para su hogar.
+                    </p>
 </div>
-<!-- Weight/Sort Filter -->
-<div class="flex gap-3">
-<select class="bg-surface-container border border-glass-border rounded-lg px-4 py-2 font-label-md text-label-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
-<option>Ordenar por: Destacados</option>
-<option>Precio: Menor a Mayor</option>
-<option>Precio: Mayor a Menor</option>
-</select>
-<button class="flex items-center justify-center p-2 rounded-lg bg-surface-container border border-glass-border text-on-surface-variant hover:text-primary transition-colors">
-<span class="material-symbols-outlined">filter_list</span>
-</button>
+</section>
+<!-- Category Filters (Glassmorphic Pills) -->
+<div class="flex overflow-x-auto pb-4 mb-8 gap-3 hide-scrollbar scroll-smooth">
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                    Todos
+                </button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-label-md text-label-md shadow-[0_0_10px_rgba(172,199,255,0.15)] transition-all">
+                    Snacks
+                </button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                    Café y Té
+                </button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                    Cereales Premium
+                </button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                    Hogar
+                </button>
+</div>
+<!-- Bento Grid Product Display -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Product Card 1 (Highlight Item - Nod to Reference Image) -->
+<article class="group relative bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] flex flex-col h-full col-span-1 md:col-span-2 lg:col-span-2 row-span-2">
+<div class="relative h-64 md:h-80 w-full bg-surface-container-lowest p-6 flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-highest/20 to-transparent z-10"></div>
+<img alt="Yamama Donut Cakes" class="w-full h-full object-contain z-0 group-hover:scale-105 transition-transform duration-500 drop-shadow-2xl" data-alt="A high-quality, studio-lit photograph of a stack of premium chocolate donut cake boxes, resembling a luxurious version of Yamama brand packaging. The boxes feature sleek, dark teal and rich brown colors with elegant, minimalist typography. They rest on a polished, dark charcoal slate surface. The lighting is soft and directional, highlighting the textures of the packaging against a deep, seamless dark background, perfectly matching a premium grocery dark-mode interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWou86l7cL9UDs-xnGMDHlBt40-8uP326OCdaD7-UeWPtyMM0a1DybAYAn2QjaXHet82aH-TrkOb7H-Kg8jT2Q-04NySaWGMF92jXxhPtkRpAzTj2kEr5H8hdwInzNm7Ch2nTFcZHZ-4kXAuKpbtRwEHdLTr5dfjlzURn1j5gvJtfXzsaptJ3VObVkNyLwJL5jrdlrYhEPOLsnVRRJUpqPIVL8NFboOOCISzxoWky1FsYSE2NxU8tDMyD0-OXFrXprHup6GcQxMYs"/>
+<div class="absolute top-4 left-4 z-20 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full border border-secondary/20">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-bold">Favorito</span>
 </div>
 </div>
-<!-- Bento Grid Layout for Products -->
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-<!-- Hero Product Card (Takes 2 columns on tablet/desktop) -->
-<div class="md:col-span-2 md:row-span-2 rounded-2xl bg-charcoal-surface border border-glass-border overflow-hidden relative group">
-<div class="absolute inset-0 z-0">
-<img alt="Cliente recibiendo bandeja de carne picada fresca en el mostrador del supermercado, ambiente iluminado y moderno." class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uh5wZTFCMZib8ayWKdliLWGP-scb3yVV97txf8G2sajHM9oTbqqqXtsHCtzeEvBeP2oKvXyzdaoctTTEQg445-WRhvZDCo4Q0cCVKlg3e3K5BOyVSX30L-EJQenYHOdVZdub3a3qHBiNhZyPx5BySS_yzpkPcB0_6FlR5XTr3MZnZ5SFWqdeJVn5gArnM7ulsXx847hedOqx1dQ6uYHHsCXUQrucw2faZIsKglUzY_klRasgyo9waAHczg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-deep-black/90 via-deep-black/40 to-transparent"></div>
-</div>
-<div class="relative z-10 p-6 flex flex-col justify-end h-full min-h-[300px] md:min-h-[400px]">
-<span class="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm rounded-full w-max mb-3 uppercase tracking-wider">Corte Especial</span>
-<h3 class="font-headline-md text-headline-md text-white mb-2">Picada Especial de Res</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4 max-w-md">Carne de res de primera calidad, picada al momento. Ideal para guisos y preparaciones rápidas.</p>
-<div class="flex items-end justify-between mt-auto">
+<div class="p-5 flex flex-col flex-1 relative z-20 bg-surface-container">
+<div class="flex justify-between items-start mb-2">
 <div>
-<span class="block font-label-sm text-label-sm text-on-surface-variant mb-1">Precio por Kg</span>
-<span class="font-headline-md text-headline-md text-secondary">$14.99</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Cajas de Donut Cake Yamama Premium</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Doble chocolate oscuro, importadas. Pack de 12 piezas de indulgencia absoluta.</p>
 </div>
-<button class="bg-primary hover:bg-primary-container text-on-primary rounded-full w-12 h-12 flex items-center justify-center transition-colors shadow-[0_0_20px_rgba(172,199,255,0.3)]">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_shopping_cart</span>
+</div>
+<div class="mt-auto pt-4 flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-primary">$18.99</span>
+<button class="bg-primary text-on-primary hover:bg-primary-fixed-dim rounded-full w-12 h-12 flex items-center justify-center transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add</span>
 </button>
 </div>
 </div>
-</div>
+</article>
 <!-- Product Card 2 -->
-<div class="rounded-xl bg-charcoal-surface border border-glass-border overflow-hidden flex flex-col group hover:border-primary/50 transition-colors">
-<div class="h-48 relative overflow-hidden bg-surface-container-low">
-<img alt="Carnicero con mascarilla mostrando un bloque grande de pechuga cocida de pollo marca Belilla en una cocina industrial." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujQeuFGwPfrLxAPylzjglzza9rnMEqgiHadwwjFwGtp6Rf1JhGVC8mJ7WFyRsitg1DgUjV1Bsrx-hsFIomUm7B0bimqmkhyVSo67v8bfRhaDMK13IOpGQ4ZUQkbIJ-1X7wTwTS30GII7mJWDUe-hDf83NqkwIgs40ORAid6Jzx2bgxdoDbt-pnrbULrRzcdVV4SkoBFdwk2zAPBvU8qsD-5BR3GuaOJkUz1jPPCTT42C50bo60xWb9xDcc"/>
+<article class="group relative bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full">
+<div class="relative h-48 w-full bg-surface-container-lowest p-4 flex items-center justify-center">
+<img alt="Café de Especialidad" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, matte black bag of specialty coffee beans standing upright. The packaging features highly minimalist, abstract gold foil stamping. It is professionally photographed against a pure, very dark grey background with subtle under-lighting that creates a premium, high-contrast, moody aesthetic suitable for a luxury e-commerce dark mode layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Rz7aPuwyMPk25H7gOAro8aA_pgy1VmBRNCBiMhOrR0qx80RhJLOTVNHoApQol-CrEeZwcTCAEx3bSXO_VHxl2lBm5KRWrEzJFEHPaF3njTFOjnANRktfoBwTGwxFiZ0HtyeV7Le3GBTZoUX7ZUSrOUF9L6MS04mGvhrjgXoBVzpsq3kbwwbnaFS_B3ACehpWaUKhk8hwEt3aHcjqMxW_vzgK8F88EKEmNrWjn0ETddP_lNB30ZZiq1v1syghUmbW4scEJYZMojQ"/>
 </div>
-<div class="p-4 flex flex-col flex-grow">
-<h4 class="font-headline-sm text-[18px] leading-[24px] font-semibold text-on-surface mb-1">Pechuga Cocida Belilla</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Pieza entera, ideal para rebanar.</p>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-1">Café Origen Colombia</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4">Tueste medio, 500g</p>
 <div class="mt-auto flex items-center justify-between">
-<span class="font-headline-sm text-[18px] leading-[24px] font-bold text-inverse-surface">$8.50 <span class="text-[12px] font-normal text-on-surface-variant">/ kg</span></span>
-<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-headline-md text-headline-md text-on-surface">$24.50</span>
+<button class="bg-surface-variant text-on-surface hover:bg-primary hover:text-on-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">add</span>
 </button>
 </div>
 </div>
+</article>
+<!-- Product Card 3 -->
+<article class="group relative bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full">
+<div class="relative h-48 w-full bg-surface-container-lowest p-4 flex items-center justify-center">
+<img alt="Chips de Vegetales" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated, dark-themed cylindrical container of artisanal root vegetable crisps. The packaging is matte charcoal with vibrant, high-contrast typography in deep orange and purple. Photographed in a dramatic, low-key lighting setup on a dark reflective surface, emphasizing a luxurious, modern, 'lights out' grocery brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABBOnYlYpdbTMyT51p4qiXx8x1Cy4KJYXUso2ppDBYJnFvcK9-gkOiVCJ2Kiexj_ADT-vLjdJ2sjKkbTY1q4lM5KVWB4q_NYT-NFLLt43M0qttCTSLZUpcnDappuCohh2iX2UrNSaNZCVssIdb_eZv1VzhMmiNkvCKVDW6DsVJ4dMaaeyjigwQQJzZrAYckpXLX9pu1DUft36PENe2ifCdinQhHqJxUrsJNXrDHrzpE_BDH2MeVLqAMd95HEM16yyEfQoHOhcq13c"/>
 </div>
-<!-- Product Card 3 (Placeholder for variety) -->
-<div class="rounded-xl bg-charcoal-surface border border-glass-border overflow-hidden flex flex-col group hover:border-primary/50 transition-colors">
-<div class="h-48 relative overflow-hidden bg-surface-container-low flex items-center justify-center">
-<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-surface-container-high opacity-50"></div>
-<span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50 z-10">set_meal</span>
-<div class="absolute top-2 left-2 bg-error-container text-on-error-container text-[10px] font-bold px-2 py-1 rounded">-15%</div>
-</div>
-<div class="p-4 flex flex-col flex-grow">
-<h4 class="font-headline-sm text-[18px] leading-[24px] font-semibold text-on-surface mb-1">Lomo de Cerdo Ahumado</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Corte magro, sabor intenso.</p>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-1">Chips de Raíces</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4">Snack artesanal, 150g</p>
 <div class="mt-auto flex items-center justify-between">
-<div class="flex flex-col">
-<span class="text-[12px] line-through text-on-surface-variant">$12.00</span>
-<span class="font-headline-sm text-[18px] leading-[24px] font-bold text-inverse-surface">$10.20 <span class="text-[12px] font-normal text-on-surface-variant">/ kg</span></span>
-</div>
-<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-headline-md text-headline-md text-on-surface">$8.90</span>
+<button class="bg-surface-variant text-on-surface hover:bg-primary hover:text-on-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">add</span>
 </button>
 </div>
 </div>
+</article>
+<!-- Product Card 4 -->
+<article class="group relative bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full">
+<div class="relative h-48 w-full bg-surface-container-lowest p-4 flex items-center justify-center">
+<img alt="Aceite de Oliva Extra Virgen" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A tall, elegant bottle of extra virgin olive oil made of dark green, almost black glass. The label is minimal white textured paper with blind embossing. The bottle is backlit slightly to reveal a subtle glow of the golden oil within, set against a completely black void background. The aesthetic is ultra-premium, moody, and highly refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTrPK1IlWGfpy7duc1uN9A-mvj9DJOmIRae2i-rnaaI37HjHpe2Qfbq3AyYamta91SgIhkdV5R10ZpRa7Gt30-lS7GdZPtH3b04liUN3D-CagjSMQQz_q5eOBd1I6Eu7bzU232bP2leT-f5vm1YStuC1RIskUQ0C-5mVpswYO7Ti6j8CG5Nzm25QSfDIpb-z5kVt-ZKNqPNpdQbjoonQrsszTG6av7D8V9iskTmGywAqEsCxyOUHDqlbBLQrje258cQmBxfmGAa0c"/>
 </div>
-<!-- Product Card 4 (Placeholder) -->
-<div class="rounded-xl bg-charcoal-surface border border-glass-border overflow-hidden flex flex-col group hover:border-primary/50 transition-colors">
-<div class="h-48 relative overflow-hidden bg-surface-container-low flex items-center justify-center">
-<div class="absolute inset-0 bg-gradient-to-br from-surface-container to-surface-container-high opacity-50"></div>
-<span class="material-symbols-outlined text-6xl text-on-surface-variant opacity-50 z-10">kebab_dining</span>
-</div>
-<div class="p-4 flex flex-col flex-grow">
-<h4 class="font-headline-sm text-[18px] leading-[24px] font-semibold text-on-surface mb-1">Chorizo Parrillero</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Paquete de 6 unidades, artesanal.</p>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-1">Aceite de Oliva Virgen</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4">Prensado en frío, 750ml</p>
 <div class="mt-auto flex items-center justify-between">
-<span class="font-headline-sm text-[18px] leading-[24px] font-bold text-inverse-surface">$5.99 <span class="text-[12px] font-normal text-on-surface-variant">/ pqte</span></span>
-<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:opacity-90 transition-opacity">
-<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-headline-md text-headline-md text-on-surface">$32.00</span>
+<button class="bg-surface-variant text-on-surface hover:bg-primary hover:text-on-primary rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">add</span>
 </button>
 </div>
 </div>
+</article>
 </div>
+<!-- Floating Checkout Action (Desktop) -->
+<div class="hidden lg:flex fixed bottom-8 right-8 z-50">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-headline-md text-[18px] font-bold shadow-[0_10px_25px_rgba(255,184,102,0.3)] hover:scale-105 transition-transform flex items-center gap-3">
+<span class="material-symbols-outlined">shopping_basket</span>
+                    Ver Carrito (3)
+                </button>
 </div>
 </main>
 </div>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 lg:hidden bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-glass-border shadow-[0_-4px_12px_rgba(0,0,0,0.5)] docked full-width bottom-0 rounded-t-xl text-primary dark:text-primary-fixed">
-<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold active:bg-surface-variant/30 transition-transform" href="index.html">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
-<span class="font-label-sm text-label-sm mt-1">Shop</span>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 lg:hidden bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-glass-border shadow-[0_-4px_12px_rgba(0,0,0,0.5)] rounded-t-xl">
+<!-- Shop (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-110 transition-transform" href="index.html">
+<span class="material-symbols-outlined filled mb-1">storefront</span>
+<span class="font-label-sm text-label-sm">Shop</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30" href="#">
-<span class="material-symbols-outlined">search</span>
-<span class="font-label-sm text-label-sm mt-1">Search</span>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 relative" href="index.html">
-<span class="material-symbols-outlined">shopping_basket</span>
-<span class="font-label-sm text-label-sm mt-1">Cart</span>
-<span class="absolute -top-1 right-2 w-4 h-4 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold flex items-center justify-center">3</span>
+<!-- Cart -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 transition-colors relative" href="index.html">
+<div class="relative">
+<span class="material-symbols-outlined mb-1">shopping_basket</span>
+<span class="absolute -top-1 right-0 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+</div>
+<span class="font-label-sm text-label-sm">Cart</span>
 </a>
 </nav>
+<!-- Simple interaction script -->
+<script>
+        // Subtle interaction: adding items to cart effect
+        document.querySelectorAll('button:has(span.material-symbols-outlined:contains("add"))').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('.material-symbols-outlined');
+                icon.textContent = 'check';
+                this.classList.replace('text-on-surface', 'text-success-green');
+                this.classList.replace('hover:text-on-primary', 'hover:text-success-green');
+                
+                setTimeout(() => {
+                    icon.textContent = 'add';
+                    this.classList.replace('text-success-green', 'text-on-surface');
+                    this.classList.replace('hover:text-success-green', 'hover:text-on-primary');
+                }, 1500);
+            });
+        });
+    </script>
 </body></html>
