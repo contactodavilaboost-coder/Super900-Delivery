@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verduras y Frutas - Super900</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#1e2020",
+                        "success-green": "#28C76F",
+                        "surface-container-low": "#1a1c1c",
+                        "on-error": "#690005",
+                        "tertiary": "#bac7e3",
+                        "outline-variant": "#434751",
+                        "inverse-surface": "#e2e2e2",
+                        "deep-black": "#000000",
+                        "on-background": "#e2e2e2",
+                        "tertiary-fixed": "#d6e3ff",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-primary-fixed-variant": "#0f458b",
+                        "on-secondary-fixed-variant": "#673d00",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#ffb866",
+                        "on-secondary-fixed": "#2b1700",
+                        "background": "#121414",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface-tint": "#acc7ff",
+                        "surface-variant": "#333535",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface": "#121414",
+                        "surface-container-high": "#282a2b",
+                        "inverse-primary": "#315da5",
+                        "tertiary-fixed-dim": "#bac7e3",
+                        "on-primary-fixed": "#001a40",
+                        "on-tertiary": "#243147",
+                        "surface-bright": "#37393a",
+                        "primary": "#acc7ff",
+                        "error-container": "#93000a",
+                        "primary-container": "#003e84",
+                        "on-secondary": "#482900",
+                        "on-tertiary-fixed": "#0e1c31",
+                        "surface-container-highest": "#333535",
+                        "on-error-container": "#ffdad6",
+                        "glass-border": "rgba(255, 255, 255, 0.12)",
+                        "on-surface-variant": "#c3c6d2",
+                        "on-surface": "#e2e2e2",
+                        "outline": "#8d909c",
+                        "charcoal-surface": "#121212",
+                        "secondary": "#ffb866",
+                        "surface-dim": "#121414",
+                        "tertiary-container": "#334057",
+                        "secondary-container": "#f19700",
+                        "on-tertiary-container": "#9facc7",
+                        "on-secondary-container": "#5d3700",
+                        "primary-fixed": "#d7e2ff",
+                        "on-primary-container": "#83acf9",
+                        "inverse-on-surface": "#2f3131",
+                        "secondary-fixed": "#ffddba",
+                        "on-primary": "#002f67",
+                        "error-red": "#EA5455"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter-mobile": "16px",
+                        "gutter-desktop": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-surface'); }
+        .glass-panel { background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(20px); border: 1px solid theme('colors.glass-border'); }
+        .card-surface { background-color: theme('colors.charcoal-surface'); border: 1px solid theme('colors.glass-border'); }
+        /* Hide scrollbar for horizontal scroll areas but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col md:flex-row bg-background text-on-surface font-body-md">
+<!-- Desktop SideNavBar -->
+<nav class="hidden lg:flex flex-col h-screen p-base fixed left-0 z-40 bg-surface-container dark:bg-surface-container-high border-r border-glass-border shadow-xl w-64 top-0">
+<div class="flex flex-col gap-8 h-full">
+<div class="flex flex-col gap-2 p-4"><img alt="Super900 Logo" class="h-12 object-contain mb-2" src="https://lh3.googleusercontent.com/aida/ADBb0ugs-Y2XpvRrVKL70RcgQeZkWDCuZUAUIe8J9PUcHUBh5GHZWaPBVnQ9we1scdtQdW2fMrhwefeORQ7w2_33a1sFksn_OG5SPtgGPbtt1jDZ-s8Y_Z7yp1TLJET2tW093e2_LfKawyr1Mh_wsO7OZHPoWqX8LSEjYNHQzln4asKGsY3-hY6O9H1T8oICeKh8ROTNAzDCtq4IP9WZJSFipryRou7CRGhK10ATYkG1KI7hv-d7Lhajk6QslxQ"/><p class="font-label-md text-label-md text-on-surface-variant">Premium Selection</p></div>
+<div class="flex flex-col gap-2 flex-grow"><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">local_bar</span><span class="font-label-md text-label-md">Bebidas</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">restaurant</span><span class="font-label-md text-label-md">Carnes</span></a><a class="flex items-center space-x-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span><span class="font-label-md text-label-md">Verduras</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">coffee</span><span class="font-label-md text-label-md">Café</span></a><a class="flex items-center space-x-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg hover:bg-surface-variant/50 transition-all" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">fastfood</span><span class="font-label-md text-label-md">Snacks</span></a></div>
+<div class="mt-auto flex flex-col gap-4"><button class="w-full py-3 px-4 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg hover:bg-primary-fixed transition-colors">Ver Ofertas</button><hr class="border-glass-border my-4"/><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">receipt_long</span><span class="font-label-md text-label-md">Mis Pedidos</span></a><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span><span class="font-label-md text-label-md">Soporte</span></a></div>
+</div>
+</nav>
+<!-- Mobile TopNavBar -->
+<header class="lg:hidden sticky top-0 flex justify-between items-center w-full px-margin-mobile py-4 z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-glass-border shadow-md dark:shadow-none docked full-width top-0 z-50"><div class="flex items-center"><img alt="Super900 Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugs-Y2XpvRrVKL70RcgQeZkWDCuZUAUIe8J9PUcHUBh5GHZWaPBVnQ9we1scdtQdW2fMrhwefeORQ7w2_33a1sFksn_OG5SPtgGPbtt1jDZ-s8Y_Z7yp1TLJET2tW093e2_LfKawyr1Mh_wsO7OZHPoWqX8LSEjYNHQzln4asKGsY3-hY6O9H1T8oICeKh8ROTNAzDCtq4IP9WZJSFipryRou7CRGhK10ATYkG1KI7hv-d7Lhajk6QslxQ"/></div><div class="flex items-center space-x-4"><button class="text-on-surface-variant hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined">search</span></button><button class="text-on-surface-variant hover:text-primary transition-colors duration-200 relative"><span class="material-symbols-outlined">shopping_cart</span><span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span></button></div></header>
+<!-- Main Content Canvas -->
+<main class="flex-grow lg:ml-64 pb-24 lg:pb-0 min-h-screen flex flex-col">
+<!-- Hero Section / Context Image -->
+<section class="mt-8 mb-12 rounded-xl overflow-hidden relative h-[40vh] min-h-[300px]">
+<img alt="Trabajador de La Cosecha organizando productos frescos" class="absolute inset-0 w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0uhFc-5r0SzOcXiLpm-8WPyj4itr1bICJa1v1ft7NP5nu0nQOn-JsX_5pRdGmppRIkTTIcdhvDpEJBvXg5SM7_o2FYWe5jFC75m_e3quhcd3apM4q2NLfuPs1QmGQ1KnZsnCyxdE_3u4pGfMHgPOJEJoyuzkqCr85xmIXK4WNIC68t6XPTkxSl2GJODibcq4VkzmjigVMPBKv7-CNlWqfssFoS9Co1UEY9uidTnClPDLBf-PDYy9AcratR4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-2">Verduras y Frutas</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Selección premium directa de la cosecha. Frescura garantizada cada día para tu cocina.</p>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<div class="mb-10 flex flex-col sm:flex-row gap-4 items-center justify-between glass-panel p-4 rounded-xl">
+<div class="relative w-full sm:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border-glass-border rounded-full py-3 pl-12 pr-4 text-on-surface focus:ring-primary focus:border-primary font-body-md text-body-md placeholder:text-on-surface-variant" placeholder="Buscar verduras frescas..." type="text"/>
+</div>
+<div class="flex gap-2 w-full sm:w-auto overflow-x-auto no-scrollbar pb-2 sm:pb-0">
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-bold">Todo</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full card-surface text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md text-label-md">Temporada</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full card-surface text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md text-label-md">Orgánico</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full card-surface text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md text-label-md">Exóticas</button>
+</div>
+</div>
+<!-- Product Grid (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+<!-- Featured Product (Spans 2 cols on tablet/desktop) -->
+<div class="col-span-2 md:col-span-2 row-span-2 card-surface rounded-xl overflow-hidden group relative flex flex-col h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A vibrant, high-quality studio photograph of a freshly sliced papaya revealing its bright orange flesh and dark seeds. The papaya rests on a dark, minimalist slate surface. Soft, directional light highlights the juicy texture of the fruit, creating a premium, dark-mode visual aesthetic suitable for a high-end grocery app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPldQr-uJkQ0Wg204uYD1jkyrYOIICLyKLXAZ0wui73qVw_xSX3gHPYr5W0o5UqfsZFhUwK3-oH07xxqSWm317xh30aRCQp1qCZ_PjogsJBoYLFB-ex189gjAwbcXl28PIsHvvin14l2EAyHGQnUb38q3buAw_U39akuyMDhLta1m5uvDRhnfegJOc1LnIeJQlRDrZq5bgXWa2h0cSWSYhV_vaJ19UdH7I8BnA3ZhpocZnyaek7gFP5gzSzUcDIYZXqHd0BUNuVqM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-black/90 via-deep-black/20 to-transparent"></div>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">Destacado</div>
+<div class="mt-auto p-6 relative z-10">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Papaya Hawaiana</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Dulce y jugosa, perfecta para el desayuno.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-secondary">€4.50 <span class="font-body-md text-body-md text-on-surface-variant">/ kg</span></span>
+<button class="bg-secondary text-deep-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Standard Product Card -->
+<div class="card-surface rounded-xl overflow-hidden group flex flex-col h-[280px]">
+<div class="relative h-40 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" data-alt="A close-up, premium studio shot of fresh, bright green broccoli florets set against a deep charcoal background. The lighting is soft but precise, emphasizing the complex texture and vibrant color of the vegetable, creating a moody, high-end culinary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp_0cGdnI4MTd8atJzAwEngv07h4xmEqeTtmSnsezvnVZIHTNVAGVT0LZjOr8eaJIdbkY0LrN48Egq2z0fC5u4HSXQCg_3AY6zI9W7yoClvHfvF_ZGaf2xFNPF1Y7slVpBaa_9AAOTlqq1EUpRWrc-scdMsozIBYhH0n0NX5dhFZRnn3cD1dDlLtnSGWc-CT_fzEMgd-b-jMQ1FvHZ5Qftt48MMz60J75ISN-4Z-CgmsUoVLkfIVw_vXAyTIgOvXpx1HzQfFq_X3w"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-on-surface mb-1 truncate">Brócoli Fresco</h4>
+<span class="font-headline-md text-headline-md text-secondary mt-auto">€2.20 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">/ ud</span></span>
+<button class="absolute bottom-4 right-4 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-fixed transition-colors opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-200">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Standard Product Card -->
+<div class="card-surface rounded-xl overflow-hidden group flex flex-col h-[280px]">
+<div class="relative h-40 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" data-alt="A vibrant cluster of ripe, deep yellow pineapples photographed in a premium, dark studio setting. The textured skin and green crowns are sharply focused under sophisticated, low-key lighting, emphasizing a fresh, tropical, and luxurious feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNYa5lc6XrKT6uQtBtBLnmKhf4PSIP-05qWPqJ1W8dVoiog4gWlebPm0Xo4BgpPE_yjXFyUSTlkr5b4gi4-Ooj5FHc3Tcmt4lJrLOvQMtWCfRYU2TtSo_RWdecdRCMoYgooq70WvW2fYNVK1uXqVW2E6wCO-sXZgFCEZtNiUjQWYGVw0xtj6nz77Qxwzac6hG_lLJEgFaBmumpPKJtXmjUJ3Gm8K1kxdYtmsnp-K7WFtYTK24lu1D86in97GYB53IBPHRt64aPCPA"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-on-surface mb-1 truncate">Piña Golden</h4>
+<span class="font-headline-md text-headline-md text-secondary mt-auto">€3.90 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">/ ud</span></span>
+<button class="absolute bottom-4 right-4 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-fixed transition-colors opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-200">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Standard Product Card -->
+<div class="card-surface rounded-xl overflow-hidden group flex flex-col h-[280px]">
+<div class="relative h-40 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" data-alt="A moody, high-resolution image of a bunch of perfectly ripe, vibrant red tomatoes still on the vine. They are placed on a matte black surface with subtle, dramatic lighting that highlights their glossy skin and deep color, fitting a high-end grocery interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPhmj8oT9FGDNpF9UbMgDnELwOy-zyEpyA0uNk-cMRKYMTQN6-HU5Yi56McTFYDySPMIA7SN5UfP58w-hLXtyq5LlsagsHuGlOsOUiw9TMzgvoDxsHCXEwnVfBmonrsqwwEitLzrPjIr3paA-4mpFDCbKcsXTSOSvAn4ma7MDMFEnYYZykCGn6z5bkv4ja1xqNAr0G-_EZgL71IJ0Uogx4ogg9gGUoN12utm3_ftKkJd3IhSA-TBuWT8zd4weDh-E60cqxsphVEs4"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-on-surface mb-1 truncate">Tomate Rama</h4>
+<span class="font-headline-md text-headline-md text-secondary mt-auto">€2.80 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">/ kg</span></span>
+<button class="absolute bottom-4 right-4 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-fixed transition-colors opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-200">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Standard Product Card -->
+<div class="card-surface rounded-xl overflow-hidden group flex flex-col h-[280px]">
+<div class="relative h-40 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" data-alt="A sleek, dark-mode styled photograph of a single, perfectly smooth, dark purple eggplant sitting on a textured charcoal background. The lighting is deliberate and moody, showcasing the glossy surface and rich color of the vegetable in a premium culinary context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYR9OAv0n0K5R4uFVA2U0_CwNIrtLgmgA1ry9MYveVvXHJR5Yo68SCz0aU_fvDbjikEnIC0yNojl0Lm_4rOMFRDZ5E720buezPaqHhawjraWcO6nP4HLg7Dvk4kr9Q2cwCXKkUubodG4HJbAUCgOFy8dyjlrjtYzoaaE4_U1F9QI1y-4cNDsSUZymd4x9mIBP9a2_8CJ2B4WL95Np9ZAJ5zyB1acg9bnPeB478bJ9Mq0uRj9U3jxyMkT_hj_WPgJUhbDVlcfmXdes"/>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-on-surface mb-1 truncate">Berenjena Negra</h4>
+<span class="font-headline-md text-headline-md text-secondary mt-auto">€1.95 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">/ kg</span></span>
+<button class="absolute bottom-4 right-4 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary-fixed transition-colors opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-200">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile BottomNavBar -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface/90 dark:bg-surface-container-highest/90 backdrop-blur-lg border-t border-glass-border shadow-[0_-4px_12px_rgba(0,0,0,0.5)] rounded-t-xl"><a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 transition-transform" href="#"><span class="material-symbols-outlined">storefront</span><span class="font-label-sm text-label-sm mt-1">Shop</span></a><a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-110 transition-transform active:bg-surface-variant/30" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span><span class="font-label-sm text-label-sm mt-1">Buscar</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 transition-transform relative" href="#"><span class="material-symbols-outlined">shopping_basket</span><span class="absolute -top-1 right-0 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span><span class="font-label-sm text-label-sm mt-1">Carrito</span></a></nav>
+</body></html>

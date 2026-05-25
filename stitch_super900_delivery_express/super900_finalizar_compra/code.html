@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Super900 - Shopping Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#0e1c31",
+                    "on-secondary-container": "#5d3700",
+                    "inverse-on-surface": "#2f3131",
+                    "primary-fixed": "#d7e2ff",
+                    "secondary-fixed": "#ffddba",
+                    "surface-container-highest": "#333535",
+                    "on-primary-fixed": "#001a40",
+                    "deep-black": "#000000",
+                    "primary-container": "#003e84",
+                    "primary-fixed-dim": "#acc7ff",
+                    "tertiary-container": "#334057",
+                    "on-primary-fixed-variant": "#0f458b",
+                    "secondary": "#ffb866",
+                    "on-secondary-fixed": "#2b1700",
+                    "outline-variant": "#434751",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#e2e2e2",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container": "#1e2020",
+                    "outline": "#8d909c",
+                    "surface-tint": "#acc7ff",
+                    "surface-dim": "#121414",
+                    "primary": "#acc7ff",
+                    "secondary-fixed-dim": "#ffb866",
+                    "tertiary": "#bac7e3",
+                    "surface-container-low": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#673d00",
+                    "on-primary-container": "#83acf9",
+                    "on-surface-variant": "#c3c6d2",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "on-primary": "#002f67",
+                    "surface-container-high": "#282a2b",
+                    "surface": "#121414",
+                    "background": "#121414",
+                    "glass-border": "rgba(255, 255, 255, 0.12)",
+                    "error-red": "#EA5455",
+                    "on-tertiary-container": "#9facc7",
+                    "success-green": "#28C76F",
+                    "on-secondary": "#482900",
+                    "surface-bright": "#37393a",
+                    "on-surface": "#e2e2e2",
+                    "secondary-container": "#f19700",
+                    "charcoal-surface": "#121212",
+                    "on-tertiary": "#243147",
+                    "tertiary-fixed-dim": "#bac7e3",
+                    "surface-variant": "#333535",
+                    "on-error": "#690005",
+                    "tertiary-fixed": "#d6e3ff",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#315da5",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0c0f0f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-mobile": "16px",
+                    "margin-mobile": "20px",
+                    "container-max-width": "1280px",
+                    "base": "8px",
+                    "gutter-desktop": "24px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Montserrat"
+                    ],
+                    "headline-md": [
+                            "Montserrat"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Montserrat"
+                    ],
+                    "headline-lg": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121414; /* background */
+            color: #e2e2e2; /* on-surface */
+        }
+        
+        /* Custom Scrollbar for the cart area */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333535; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #434751; 
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-hidden relative"><div class="min-h-screen bg-background flex flex-col lg:flex-row">
+<div class="flex-1 p-6 lg:p-12 overflow-y-auto bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto">
+<header class="mb-10">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Checkout</h1>
+<p class="text-on-surface-variant">Complete your order by providing your details below.</p>
+</header>
+<form class="space-y-12">
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">person</span> 1. Customer Information
+          </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="block font-label-md text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="+58 412 000 0000" type="tel"/>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">local_shipping</span> 2. Delivery Address
+          </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2 space-y-2">
+<label class="block font-label-md text-on-surface-variant">Street Address</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Av. Principal, Urb. Puerta Maraven" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">City</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Punto Fijo"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-on-surface-variant">Landmarks / Instructions</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Near the shopping mall" type="text"/>
+</div>
+</div>
+</section>
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">account_balance_wallet</span> 3. Payment Method
+          </h2>
+<div class="space-y-6">
+<div class="p-6 bg-surface-container-low border border-glass-border rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary">smartphone</span>
+<h3 class="font-label-md text-on-surface">Pago Móvil Details</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Bank Name" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="ID (Cédula)" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Phone" type="text"/>
+</div>
+</div>
+<div class="p-6 bg-surface-container border border-primary/20 rounded-xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<h3 class="font-label-md text-on-surface">Zelle</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Account Email" type="email"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Reference Number" type="text"/>
+</div>
+</div>
+<div class="p-4 bg-surface-container-highest/30 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">info</span>
+<p class="text-xs text-on-surface-variant">For <strong>Efectivo (Cash)</strong>, please ensure you have the exact change available at delivery.</p>
+</div>
+</div>
+</section>
+</form>
+</div>
+</div>
+<div class="lg:w-[480px] w-full border-l border-glass-border" id="cart-container-wrapper"><div class="h-full bg-charcoal-surface flex flex-col" id="cart-drawer-copy"><!-- Header -->
+<div class="flex items-center justify-between px-6 py-5 border-b border-glass-border bg-charcoal-surface/90 backdrop-blur-md sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+<h2 class="font-headline-md text-headline-md text-on-surface m-0">Your Cart</h2>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">3 items</span>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<div class="space-y-4">
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-glass-border hover:bg-surface-container transition-colors group">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden relative flex-shrink-0">
+<img alt="Fresh organic avocados" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS0ft5AyAovzbCtPNlCbQHUIrmJ6yVJpg1Wp1u5_7hVNWISL0sbtG7g7qgOarEjpnsH49Y4VaRfWoRWCOuzK_P_N52Qo-lIemNJxyzgwEHxF970gjKVHPTje5V0IqboHxdj2bXJdNlXXNKPZAoiYdVNgMR0bv8a7UIZuPy7qYhuP3imIHqrwdFPrhJMHCYSVe8xuSUtanA7XVSlLglmgwluR7WPIz4XbEzv1Ggd0eo5coz9VKrG0SgAHUqELg4rh9-e3xKSenf-9w"/>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div class="flex justify-between items-start">
+<div><h3 class="font-label-md text-label-md text-on-surface">Organic Hass Avocados</h3><p class="text-on-surface-variant text-sm mt-0.5">Produce</p></div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="font-headline-md text-headline-md text-secondary-fixed text-lg">$4.50</div>
+<div class="text-on-surface-variant text-sm">Qty: 2</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low border border-glass-border hover:bg-surface-container transition-colors group">
+<div class="w-20 h-20 rounded-lg bg-surface-variant overflow-hidden relative flex-shrink-0">
+<img alt="Premium aged ribeye" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBajHkKgEKxvA5e1b2HNvmuzkgzjOzc3W-Jq3PltAqL1Q0yqctYNOO0Z1BaZ9yAMJwMMMEXl3w9FTVB1na5vMGWHTg9jdNOaEkkqGhcfRsNqaNrxmBHcLfBQubmr2YDqtub2SMmNNwRErKtU5jWKvhiaz4_y2-nVh_V0Q3C6bySooQ5J-Djnkdje3VBFO4KTgqanFm2mhih7sQDA5TgFV54G5jeNjjB9ws18_d2cRGljefelu63HuxQHI-OVN_AXkzCndY565VO03c"/>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div class="flex justify-between items-start">
+<div><h3 class="font-label-md text-label-md text-on-surface">Premium Aged Ribeye</h3><p class="text-on-surface-variant text-sm mt-0.5">Carnes</p></div>
+</div>
+<div class="flex justify-between items-end mt-2">
+<div class="font-headline-md text-headline-md text-secondary-fixed text-lg">$24.99</div>
+<div class="text-on-surface-variant text-sm">Qty: 1</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-3 pt-4 border-t border-glass-border">
+<div class="flex justify-between text-on-surface-variant"><span class="text-body-md">Subtotal</span><span class="text-body-md">$53.49</span></div>
+<div class="flex justify-between text-on-surface-variant"><span class="text-body-md">Delivery Fee</span><span class="text-body-md">$5.00</span></div>
+<div class="flex justify-between items-center pt-3 border-t border-glass-border mt-3">
+<span class="font-headline-md text-headline-md text-on-surface">Total</span>
+<span class="font-headline-md text-headline-md text-secondary text-2xl">$58.49</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="p-6 bg-charcoal-surface border-t border-glass-border sticky bottom-0 z-10">
+<button class="w-full bg-secondary text-deep-black font-headline-md text-headline-md py-4 rounded-xl hover:bg-secondary-fixed transition-colors flex justify-center items-center gap-2 shadow-[0_4px_14px_rgba(255,184,102,0.2)]">
+Confirm Order &amp; Pay <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div></div></div>
+</div></body></html>
