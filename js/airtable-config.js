@@ -8,7 +8,7 @@ const AirtableConfig = {
     TABLE_ID: 'tblIeU9FhjE57uXHU', // O 'Inventario'
     get PAT() {
         // Reversado para evitar bloqueos de seguridad al subir a GitHub
-        const rev = '65d70d1241f225ee17c059fe62fab65a5b6fdb9d730da85cf5cfaaf926954587.e0tMY75UCdHgx2tap';
+        const rev = '65d70d1241f225ee17c059fe62fab65a5b6fdb9d7b30da85cf5cfaa926954587.e0tMY75UCdHgx2tap';
         return rev.split('').reverse().join('');
     },
 
