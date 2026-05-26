@@ -1,2 +1,102 @@
-"/**\n * Super900 - Client-Side Cart Management Utility\n * Keeps the cart persistent across pages via localStorage.\n */\n\nconst Cart = {\n    STORAGE_KEY: 'super900_cart',\n\n    getItems() {\n        try {\n            return JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || [];\n        } catch (e) {\n            return [];\n        }\n    },\n\n    saveItems(items) {\n        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(items));\n        this.updateVisualCounters();\n    },\n\n    addItem(product) {\n        const items = this.getItems();\n        const existing = items.find(item => item.id === product.id);\n\n        if (existing) {\n            existing.qty += 1;\n        } else {\n            items.push({\n                id: product.id,\n                name: product.name,\n                price: parseFloat(product.price),\n                unit: product.unit || 'ud',\n                image: product.image || 'https://lh3.googleusercontent.com/aida-public/AB6AXuBm4fA-A2JyEiN38Y-4LjF51UB1yW62jlHmIId71RZlu-riqiXNIYbm8hnjrAR-qYaEkzzdcwFzGWgd88qWYGod8UhAceH03Idc18kA8pabIr3XXyir1g8WIIpHl48HNOtHsK7FiNmnWxISGu8ElLUED50VybucR_EGbDW6Ru54l6rVB6Vtk0gIZ4YgEaH0Ta67fDH9AfHMDhI4_rqma5lA2lvAYVz9GTpqsIzvp6HcodZaVrm_bu2z4S12V9Cs0l_TZksx-PUfiTU',\n                category: product.category || 'Otros',\n                qty: 1\n            });\n        }\n\n        this.saveItems(items);\n        this.showFloatNotification(product.name);\n    },\n\n    updateQty(productId, qty) {\n        let items = this.getItems();\n        const existing = items.find(item => item.id === productId);\n\n        if (existing) {\n            existing.qty = parseInt(qty);\n            if (existing.qty <= 0) {\n                items = items.filter(item => item.id !== productId);\n            }\n        }\n\n        this.saveItems(items);\n        \n        // Custom dispatch for pages that listen to cart edits (like checkout.html)\n        window.dispatchEvent(new CustomEvent('cartUpdated'));\n    },\n\n    removeItem(productId) {\n
-<truncated 5788 bytes>
+/**
+ * Super900 - Cart Logic
+ */
+
+const Cart = {
+    STORAGE_KEY: 'super900_cart',
+
+    getCart() {
+        try {
+            return JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || [];
+        } catch (e) {
+            return [];
+        }
+    },
+
+    saveCart(cartArray) {
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(cartArray));
+        this.updateBadge();
+    },
+
+    addItem(product) {
+        const cart = this.getCart();
+        const existing = cart.find(p => p.id === product.id);
+        
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ ...product, qty: 1 });
+        }
+        
+        this.saveCart(cart);
+        this.showToast(`Agregado: ${product.name}`);
+    },
+
+    removeItem(id) {
+        let cart = this.getCart();
+        cart = cart.filter(p => p.id !== id);
+        this.saveCart(cart);
+    },
+
+    updateQty(id, delta) {
+        let cart = this.getCart();
+        const existing = cart.find(p => p.id === id);
+        if (existing) {
+            existing.qty += delta;
+            if (existing.qty <= 0) {
+                this.removeItem(id);
+                return;
+            }
+        }
+        this.saveCart(cart);
+    },
+
+    clearCart() {
+        localStorage.removeItem(this.STORAGE_KEY);
+        this.updateBadge();
+    },
+
+    getTotalItems() {
+        return this.getCart().reduce((sum, item) => sum + item.qty, 0);
+    },
+
+    updateBadge() {
+        const count = this.getTotalItems();
+        // Update any element with class 'cart-badge-counter'
+        const badges = document.querySelectorAll('.cart-badge-counter');
+        badges.forEach(b => {
+            b.innerText = count;
+            if (count > 0) {
+                b.style.display = 'flex';
+            } else {
+                b.style.display = 'none';
+            }
+        });
+    },
+
+    showToast(message) {
+        let toast = document.getElementById('cart-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'cart-toast';
+            toast.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 bg-surface-container-high text-on-surface px-6 py-3 rounded-full shadow-lg z-[100] transition-opacity duration-300 opacity-0 pointer-events-none font-label-md border border-glass-border';
+            document.body.appendChild(toast);
+        }
+        toast.innerText = message;
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        
+        // Hide after 2 seconds
+        if (this.toastTimeout) clearTimeout(this.toastTimeout);
+        this.toastTimeout = setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+        }, 2000);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    Cart.updateBadge();
+});
+
+window.Cart = Cart;

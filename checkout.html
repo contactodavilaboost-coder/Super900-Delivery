@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Super900 - Shopping Cart</title>
+<title>Super900 - Carrito de Compras</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -198,62 +198,56 @@
 <div class="flex-1 p-6 lg:p-12 overflow-y-auto bg-surface-container-lowest">
 <div class="max-w-3xl mx-auto">
 <header class="mb-10">
-<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Checkout</h1>
-<p class="text-on-surface-variant">Complete your order by providing your details below.</p>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Finalizar Pedido</h1>
+<p class="text-on-surface-variant">Completa tu pedido proporcionando tus datos a continuación.</p>
 </header>
 <form class="space-y-12">
 <section>
-<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined">person</span> 1. Customer Information
-          </h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2"> 1. Información del Cliente</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="block font-label-md text-on-surface-variant">Full Name</label>
+<label class="block font-label-md text-on-surface-variant">Nombre Completo</label>
 <input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="block font-label-md text-on-surface-variant">Email Address</label>
+<label class="block font-label-md text-on-surface-variant">Correo Electrónico</label>
 <input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
 </div>
 <div class="md:col-span-2 space-y-2">
-<label class="block font-label-md text-on-surface-variant">Phone Number</label>
+<label class="block font-label-md text-on-surface-variant">Número de Teléfono</label>
 <input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="+58 412 000 0000" type="tel"/>
 </div>
 </div>
 </section>
 <section>
-<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined">local_shipping</span> 2. Delivery Address
-          </h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2"> 2. Dirección de Entrega</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="md:col-span-2 space-y-2">
-<label class="block font-label-md text-on-surface-variant">Street Address</label>
+<label class="block font-label-md text-on-surface-variant">Dirección (Calle/Av, Casa/Apto)</label>
 <input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Av. Principal, Urb. Puerta Maraven" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="block font-label-md text-on-surface-variant">City</label>
+<label class="block font-label-md text-on-surface-variant">Ciudad</label>
 <input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Punto Fijo"/>
 </div>
 <div class="space-y-2">
-<label class="block font-label-md text-on-surface-variant">Landmarks / Instructions</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Near the shopping mall" type="text"/>
+<label class="block font-label-md text-on-surface-variant">Punto de Referencia / Instrucciones</label>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cerca de..." type="text"/>
 </div>
 </div>
 </section>
 <section>
-<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined">account_balance_wallet</span> 3. Payment Method
-          </h2>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2"> 3. Método de Pago</h2>
 <div class="space-y-6">
 <div class="p-6 bg-surface-container-low border border-glass-border rounded-xl">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-secondary">smartphone</span>
-<h3 class="font-label-md text-on-surface">Pago Móvil Details</h3>
+<h3 class="font-label-md text-on-surface">Datos de Pago Móvil</h3>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Bank Name" type="text"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="ID (Cédula)" type="text"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Phone" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Nombre del Banco" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Cédula de Identidad" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Teléfono" type="text"/>
 </div>
 </div>
 <div class="p-6 bg-surface-container border border-primary/20 rounded-xl">
@@ -262,13 +256,13 @@
 <h3 class="font-label-md text-on-surface">Zelle</h3>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Account Email" type="email"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Reference Number" type="text"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Correo Zelle" type="email"/>
+<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Número de Referencia" type="text"/>
 </div>
 </div>
 <div class="p-4 bg-surface-container-highest/30 rounded-lg flex items-start gap-3">
 <span class="material-symbols-outlined text-on-surface-variant">info</span>
-<p class="text-xs text-on-surface-variant">For <strong>Efectivo (Cash)</strong>, please ensure you have the exact change available at delivery.</p>
+<p class="text-xs text-on-surface-variant">Para Efectivo, por favor asegúrate de tener el monto exacto al momento de la entrega.</p>
 </div>
 </div>
 </section>
@@ -279,7 +273,7 @@
 <div class="flex items-center justify-between px-6 py-5 border-b border-glass-border bg-charcoal-surface/90 backdrop-blur-md sticky top-0 z-10">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
-<h2 class="font-headline-md text-headline-md text-on-surface m-0">Your Cart</h2>
+<h2 class="font-headline-md text-headline-md text-on-surface m-0">Tu Carrito</h2>
 <span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">3 items</span>
 </div>
 </div>
@@ -326,8 +320,7 @@
 </div>
 <!-- Footer -->
 <div class="p-6 bg-charcoal-surface border-t border-glass-border sticky bottom-0 z-10">
-<button class="w-full bg-secondary text-deep-black font-headline-md text-headline-md py-4 rounded-xl hover:bg-secondary-fixed transition-colors flex justify-center items-center gap-2 shadow-[0_4px_14px_rgba(255,184,102,0.2)]">
-Confirm Order &amp; Pay <span class="material-symbols-outlined">arrow_forward</span>
+<button class="w-full bg-secondary text-deep-black font-headline-md text-headline-md py-4 rounded-xl hover:bg-secondary-fixed transition-colors flex justify-center items-center gap-2 shadow-[0_4px_14px_rgba(255,184,102,0.2)]">Confirmar Pedido y Pagar <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div></div></div>
-</div></body></html>
+</div><script src="js/airtable-config.js"></script></body></html>

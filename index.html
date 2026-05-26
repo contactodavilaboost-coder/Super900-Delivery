@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Super900 - Delivery Home</title>
@@ -109,6 +110,7 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .material-symbols-outlined.fill {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -136,7 +138,10 @@
 <span class="font-label-md text-label-md">Despensa</span>
 </a>
 </div>
-<div class="mt-auto space-y-2 pt-4 border-t border-glass-border"><button class="w-full py-3 px-4 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg hover:bg-primary-fixed transition-colors">Ver Ofertas</button><hr class="border-glass-border my-4"/><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="checkout.html"><span class="material-symbols-outlined">receipt_long</span><span class="font-label-md text-label-md">Mis Pedidos</span></a><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span><span class="font-label-md text-label-md">Soporte</span></a></div>
+<div class="mt-auto space-y-2 pt-4 border-t border-glass-border"><button class="w-full py-3 px-4 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg hover:bg-primary-fixed transition-colors">Ver
+                Ofertas</button>
+<hr class="border-glass-border my-4"/><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="checkout.html"><span class="material-symbols-outlined">receipt_long</span><span class="font-label-md text-label-md">Mis Pedidos</span></a><a class="flex items-center space-x-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-colors" href="#"><span class="material-symbols-outlined">support_agent</span><span class="font-label-md text-label-md">Soporte</span></a>
+</div>
 </nav>
 <!-- Main Content Area -->
 <main class="flex-1 relative pb-20 md:pb-0 lg:ml-64">
@@ -149,9 +154,9 @@
 <button class="text-on-surface-variant hover:text-primary transition-colors duration-200">
 <span class="material-symbols-outlined">search</span>
 </button>
-<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 relative">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 relative" onclick="window.location.href='checkout.html'">
 <span class="material-symbols-outlined">shopping_cart</span>
-<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center cart-badge-counter" style="display: none;">0</span>
 </button>
 </div>
 </header>
@@ -184,7 +189,7 @@
 <!-- Location Picker -->
 <div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low border border-glass-border rounded-full text-sm font-label-md text-label-md text-on-surface-variant cursor-pointer hover:bg-surface-variant transition-colors">
 <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">location_on</span>
-<span>Entrega en: <strong class="text-on-surface">Punto Fijo</strong></span>
+<span>Entrega en: <strong class="text-on-surface">Coro</strong></span>
 <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
 </div>
 </div>
@@ -192,13 +197,15 @@
 <!-- Categorías (Bento Grid Style) -->
 <section class="px-margin-mobile md:px-margin-desktop py-12">
 <div class="flex justify-between items-end mb-8">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Categorías</h2>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+                    Categorías</h2>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[160px] md:auto-rows-[200px]">
 <!-- Carnes (Large) -->
 <a class="col-span-2 row-span-2 relative rounded-xl overflow-hidden group border border-glass-border bg-surface-container-low hover:border-primary/50 transition-all" href="carnes.html">
 <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105" data-alt="Close up of a premium, perfectly marbled raw ribeye steak resting on a dark slate cutting board. The lighting is dramatic and cinematic, highlighting the rich red color and white marbling of the meat. The background is a very dark, blurred out professional kitchen setting, emphasizing luxury and high culinary standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByXjPPGmiLzUIlNbRqHt_q9YRanv5ydPyr_qEvwAmxBzzSWqGR3PRIdQWEuRU2lMT1bdZFLcVPlkMYIVUB-XC4XYC-2i4mAQhbD_NpHIh3wQZF5astKz9XcoPmKy0kLj2pw8UU7pm-lUIpzsn_quxY2AcQYWcFiYFmLOYUcqJ9FIo6ZGCo2iQ4I8DM_GcrmrWZ62XKfA38VKFwcxgsno3yXpW4PjcpQ5Gm6yQIK_7ixSYvu4Lk47u7pt3R-6o_XUdPdlr3qBD64QE"/>
-<div class="absolute inset-0 bg-gradient-to-t from-deep-black/90 via-deep-black/20 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-black/90 via-deep-black/20 to-transparent">
+</div>
 <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Carnes</h3>
@@ -242,14 +249,15 @@
 <section class="px-margin-mobile md:px-margin-desktop py-12 bg-surface-container-lowest border-t border-glass-border">
 <div class="flex justify-between items-end mb-8">
 <div>
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Los Mejores Productos</h2>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">
+                        Los Mejores Productos</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">Seleccionados para ti</p>
 </div>
 <a class="font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors flex items-center gap-1" href="#">
                     Ver todos <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" id="dynamic-products-grid">
 <!-- Product Card 1 -->
 <div class="bg-charcoal-surface rounded-xl border border-glass-border overflow-hidden flex flex-col group">
 <div class="relative h-40 md:h-48 bg-surface-container-high overflow-hidden">
@@ -262,7 +270,8 @@
 </button>
 </div>
 <div class="p-4 flex-1 flex flex-col">
-<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Cerveza Artesanal Premium Lúpulo</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Cerveza Artesanal
+                            Premium Lúpulo</h4>
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4">6 Pack - 330ml</p>
 <div class="mt-auto flex items-center justify-between">
 <div class="flex flex-col">
@@ -284,7 +293,8 @@
 </button>
 </div>
 <div class="p-4 flex-1 flex flex-col">
-<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Carne Molida de Primera</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Carne Molida de
+                            Primera</h4>
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4">1 Kg</p>
 <div class="mt-auto flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface">$8.50</span>
@@ -303,7 +313,8 @@
 </button>
 </div>
 <div class="p-4 flex-1 flex flex-col">
-<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Pan Artesanal de Masa Madre</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Pan Artesanal de Masa
+                            Madre</h4>
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Pieza - 500g</p>
 <div class="mt-auto flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface">$4.50</span>
@@ -322,7 +333,8 @@
 </button>
 </div>
 <div class="p-4 flex-1 flex flex-col">
-<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Café Tostado Oscuro Especial</h4>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 line-clamp-2">Café Tostado Oscuro
+                            Especial</h4>
 <p class="font-label-sm text-label-sm text-on-surface-variant mb-4">Grano Entero - 250g</p>
 <div class="mt-auto flex items-center justify-between">
 <span class="font-headline-md text-headline-md text-on-surface">$7.20</span>
@@ -341,9 +353,10 @@
 <span class="material-symbols-outlined">search</span>
 <span class="font-label-sm text-label-sm mt-1">Buscar</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1" href="index.html">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 relative" href="checkout.html">
 <span class="material-symbols-outlined">shopping_basket</span>
 <span class="font-label-sm text-label-sm mt-1">Carrito</span>
-</a>
+<span class="cart-badge-counter absolute top-0 right-2 bg-error text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" style="display: none;">0</span></a>
 </nav>
-</body></html>
+<script src="js/airtable-config.js"></script><script src="js/dynamic_products.js"></script><script src="js/cart.js"></script></body>
+</html>

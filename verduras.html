@@ -159,7 +159,7 @@
 <button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50">
 <span class="material-symbols-outlined">location_on</span>
 </button>
-<button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50 relative bg-surface-variant/30 text-primary">
+<button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50 relative bg-surface-variant/30 text-primary" onclick="window.location.href='checkout.html'">
 <span class="material-symbols-outlined">shopping_cart</span>
 <span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
 </button>
@@ -183,25 +183,8 @@
 </div>
 </section>
 <!-- Category Filters (Glassmorphic Pills) -->
-<div class="flex overflow-x-auto pb-4 mb-8 gap-3 hide-scrollbar scroll-smooth">
-<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
-                    Todos
-                </button>
-<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-label-md text-label-md shadow-[0_0_10px_rgba(172,199,255,0.15)] transition-all">
-                    Snacks
-                </button>
-<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
-                    Café y Té
-                </button>
-<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
-                    Cereales Premium
-                </button>
-<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-surface-container border border-glass-border text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
-                    Hogar
-                </button>
-</div>
 <!-- Bento Grid Product Display -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="dynamic-products-grid">
 <!-- Product Card 1 (Highlight Item - Nod to Reference Image) -->
 <article class="group relative bg-surface-container rounded-xl overflow-hidden border border-glass-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] flex flex-col h-full col-span-1 md:col-span-2 lg:col-span-2 row-span-2">
 <div class="relative h-64 md:h-80 w-full bg-surface-container-lowest p-6 flex items-center justify-center overflow-hidden">
@@ -297,13 +280,13 @@
 <span class="font-label-sm text-label-sm">Search</span>
 </a>
 <!-- Cart -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 transition-colors relative" href="index.html">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 transition-colors relative" href="checkout.html">
 <div class="relative">
 <span class="material-symbols-outlined mb-1">shopping_basket</span>
 <span class="absolute -top-1 right-0 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
 </div>
 <span class="font-label-sm text-label-sm">Cart</span>
-</a>
+<span class="cart-badge-counter absolute top-0 right-2 bg-error text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" style="display: none;">0</span></a>
 </nav>
 <!-- Simple interaction script -->
 <script>
@@ -323,4 +306,4 @@
             });
         });
     </script>
-</body></html>
+<script src="js/airtable-config.js"></script><script src="js/dynamic_products.js"></script><script src="js/cart.js"></script></body></html>
