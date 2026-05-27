@@ -4,7 +4,8 @@
   "main": "restored_airtable-config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./input.css -o ./css/styles.css --minify"
+    "build": "tailwindcss -i ./input.css -o ./css/styles.css --minify",
+    "vercel-build": "tailwindcss -i ./input.css -o ./css/styles.css --minify && mkdir -p public && cp *.html public/ && cp -r css public/ && cp -r js public/ && cp image.png public/"
   },
   "keywords": [],
   "author": "",
