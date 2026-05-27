@@ -1,31 +1,18 @@
 import os
-from bs4 import BeautifulSoup
 
-files = ['index.html', 'carnes.html', 'verduras.html', 'despensa.html', 'checkout.html', 'bebidas.html']
+with open('index.html', 'r', encoding='utf-8') as f:
+    html = f.read()
 
-for file in files:
-    if not os.path.exists(file):
-        continue
+# Replace the specific text
+# To be safe, let's find the exact block.
+old_block = '<h3 class="font-label-md text-label-md text-on-surface">Snacks</h3>'
+new_block = '<h3 class="font-label-md text-label-md text-on-surface">Despensa</h3>'
+
+if old_block in html:
+    html = html.replace(old_block, new_block)
     
-    with open(file, 'r', encoding='utf-8') as f:
-        html = f.read()
-
-    soup = BeautifulSoup(html, 'html.parser')
-
-    # Find all elements that might contain "Snacks" in the navigation
-    for a in soup.find_all('a'):
-        # Check span inside a
-        for span in a.find_all('span', class_='font-label-md'):
-            if span.string and span.string.strip() == 'Snacks':
-                span.string = 'Despensa'
-
-    # Additionally, check the category filter pills if any still say "Snacks"
-    for button in soup.find_all('button'):
-        if button.string and button.string.strip() == 'Snacks':
-            # Only change if it makes sense, maybe in despensa.html
-            pass # The user specifically asked to change the page name/sidebar "Snacks" to "Despensa". Let's stick to the nav spans.
-
-    with open(file, 'w', encoding='utf-8') as f:
-        f.write(str(soup))
-        
-print("Renamed Snacks to Despensa successfully.")
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(html)
+    print("Renamed Snacks to Despensa.")
+else:
+    print("Could not find the Snacks block.")
