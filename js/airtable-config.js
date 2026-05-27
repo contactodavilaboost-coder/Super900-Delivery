@@ -1,34 +1,12 @@
-/**
- * Super900 - Airtable Central Configuration and API Utility
- */
-
 const AirtableConfig = {
-    // Para simplificar la demo, inyectamos el PAT directo
-    BASE_ID: 'app84b9VCtWp1ZygH',
-    TABLE_ID: 'tblIeU9FhjE57uXHU', // O 'Inventario'
-    get PAT() {
-        // Reversado para evitar bloqueos de seguridad al subir a GitHub
-        const rev = '65d70d1241f225ee17c059fe62fab65a5b6fdb9d7b30da85cf5cfaa926954587.e0tMY75UCdHgx2tap';
-        return rev.split('').reverse().join('');
-    },
-
     async getRecords(tableName = 'Inventario') {
-        const url = `https://api.airtable.com/v0/${this.BASE_ID}/${tableName}?sort%5B0%5D%5Bfield%5D=Nombre&sort%5B0%5D%5Bdirection%5D=asc`;
         try {
-            const response = await fetch(url, {
-                headers: {
-                    'Authorization': `Bearer ${this.PAT}`,
-                    'Content-Type': 'application/json'
-                }
-            });
-
+            const response = await fetch(`/api/getProducts?tableName=${tableName}`);
             if (response.ok) {
                 const data = await response.json();
                 return data.records || [];
-            } else {
-                console.error("Error al obtener registros:", await response.text());
-                return [];
             }
+            return [];
         } catch (error) {
             console.error("Fetch error:", error);
             return [];
@@ -36,32 +14,20 @@ const AirtableConfig = {
     },
     
     async getExchangeRate() {
-        // Retornar caché si existe para no agotar la API en cada página
         const cached = sessionStorage.getItem('super900_dolar_bcv');
         if (cached) return parseFloat(cached);
 
-        const url = `https://api.airtable.com/v0/${this.BASE_ID}/Dolar%20BCV?maxRecords=1`;
         try {
-            const response = await fetch(url, {
-                headers: {
-                    'Authorization': `Bearer ${this.PAT}`,
-                    'Content-Type': 'application/json'
-                }
-            });
-
+            const response = await fetch(`/api/getExchangeRate`);
             if (response.ok) {
                 const data = await response.json();
-                if (data.records && data.records.length > 0) {
-                    const price = parseFloat(data.records[0].fields.Precio);
-                    if (!isNaN(price)) {
-                        sessionStorage.setItem('super900_dolar_bcv', price);
-                        return price;
-                    }
+                if (data.price) {
+                    sessionStorage.setItem('super900_dolar_bcv', data.price);
+                    return data.price;
                 }
             }
-            return 535; // Fallback default value
+            return 535;
         } catch (error) {
-            console.error("Fetch BCV error:", error);
             return 535;
         }
     },

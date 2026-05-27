@@ -1,3 +1,20 @@
+
+function showToast(message) {
+    let toast = document.getElementById('cart-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'cart-toast';
+        toast.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-success-green text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300 opacity-0';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+    }, 2500);
+}
 /**
  * Super900 - Advanced Cart State Manager
  */

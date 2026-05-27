@@ -1,120 +1,23 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en">
+<html class="dark" lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Super900 - Delivery Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-tertiary-fixed": "#0e1c31",
-                        "on-secondary-container": "#5d3700",
-                        "inverse-on-surface": "#2f3131",
-                        "primary-fixed": "#d7e2ff",
-                        "secondary-fixed": "#ffddba",
-                        "surface-container-highest": "#333535",
-                        "on-primary-fixed": "#001a40",
-                        "deep-black": "#000000",
-                        "primary-container": "#003e84",
-                        "primary-fixed-dim": "#acc7ff",
-                        "tertiary-container": "#334057",
-                        "on-primary-fixed-variant": "#0f458b",
-                        "secondary": "#ffb866",
-                        "on-secondary-fixed": "#2b1700",
-                        "outline-variant": "#434751",
-                        "on-error-container": "#ffdad6",
-                        "on-background": "#e2e2e2",
-                        "inverse-surface": "#e2e2e2",
-                        "surface-container": "#1e2020",
-                        "outline": "#8d909c",
-                        "surface-tint": "#acc7ff",
-                        "surface-dim": "#121414",
-                        "primary": "#acc7ff",
-                        "secondary-fixed-dim": "#ffb866",
-                        "tertiary": "#bac7e3",
-                        "surface-container-low": "#1a1c1c",
-                        "on-secondary-fixed-variant": "#673d00",
-                        "on-primary-container": "#83acf9",
-                        "on-surface-variant": "#c3c6d2",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "on-primary": "#002f67",
-                        "surface-container-high": "#282a2b",
-                        "surface": "#121414",
-                        "background": "#121414",
-                        "glass-border": "rgba(255, 255, 255, 0.12)",
-                        "error-red": "#EA5455",
-                        "on-tertiary-container": "#9facc7",
-                        "success-green": "#28C76F",
-                        "on-secondary": "#482900",
-                        "surface-bright": "#37393a",
-                        "on-surface": "#e2e2e2",
-                        "secondary-container": "#f19700",
-                        "charcoal-surface": "#121212",
-                        "on-tertiary": "#243147",
-                        "tertiary-fixed-dim": "#bac7e3",
-                        "surface-variant": "#333535",
-                        "on-error": "#690005",
-                        "tertiary-fixed": "#d6e3ff",
-                        "error": "#ffb4ab",
-                        "inverse-primary": "#315da5",
-                        "error-container": "#93000a",
-                        "surface-container-lowest": "#0c0f0f"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter-mobile": "16px",
-                        "margin-mobile": "20px",
-                        "container-max-width": "1280px",
-                        "base": "8px",
-                        "gutter-desktop": "24px",
-                        "margin-desktop": "40px"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Inter"],
-                        "label-md": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "display-lg": ["Montserrat"],
-                        "headline-md": ["Montserrat"],
-                        "label-sm": ["Inter"],
-                        "headline-lg-mobile": ["Montserrat"],
-                        "headline-lg": ["Montserrat"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
 
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+
+<meta name="description" content="Super900 Delivery - Calidad Premium en tu Puerta. La mejor selección de cortes, bebidas y frescos en Coro."/>
+    <meta property="og:title" content="Super900 Delivery" />
+    <meta property="og:description" content="Super900 Delivery - Calidad Premium en tu Puerta." />
+    <meta property="og:image" content="image.png" />
+    <meta property="og:url" content="https://super900-delivery.vercel.app/" />
+    <meta name="theme-color" content="#121414" />
+    <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex">
 <!-- SideNavBar (Desktop) -->
@@ -164,7 +67,7 @@
 <section class="relative px-margin-mobile md:px-margin-desktop py-12 md:py-20 flex flex-col items-center justify-center text-center overflow-hidden">
 <!-- Background Image with Gradient Overlay -->
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="A cinematic, softly lit high-end supermarket aisle featuring neatly organized fresh produce and premium grocery items. The lighting is moody and sophisticated, highlighting the vibrant colors of the food against a sleek, dark charcoal and deep blue background. The aesthetic is premium, minimalist, and trustworthy, with a subtle glassmorphic feel to the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAldqLkfcMP8L5v6UTI5_iSgybK_jdFo39b_URqRe_iynkzqDNmazscO3vcaKzPVgaA7j6X5__ghCuujhbUQzHYIDoVLrGmno9Ym0QWW5AnBzQmPFh67BZIOILy5ifM0hPj8M9WzTEEEhsqwEBzfvrY5Am227tgac720AuS7SembiK0DogjYzSXEAeCbtcQP6g_Q7P6rfMnwO9qVs4RVp6qN836Ir-AXJzMz8mGeBaQXkzF_oq3sXRZanqQUmR0qRW-z_3IGkL9aU"/>
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" alt="A cinematic, softly lit high-end supermarket aisle featuring neatly organized fresh produce and premium grocery items. The lighting is moody and sophisticated, highlighting the vibrant colors of the food against a sleek, dark charcoal and deep blue background. The aesthetic is premium, minimalist, and trustworthy, with a subtle glassmorphic feel to the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAldqLkfcMP8L5v6UTI5_iSgybK_jdFo39b_URqRe_iynkzqDNmazscO3vcaKzPVgaA7j6X5__ghCuujhbUQzHYIDoVLrGmno9Ym0QWW5AnBzQmPFh67BZIOILy5ifM0hPj8M9WzTEEEhsqwEBzfvrY5Am227tgac720AuS7SembiK0DogjYzSXEAeCbtcQP6g_Q7P6rfMnwO9qVs4RVp6qN836Ir-AXJzMz8mGeBaQXkzF_oq3sXRZanqQUmR0qRW-z_3IGkL9aU"/>
 <div class="absolute inset-0 bg-gradient-to-b from-surface-container-high to-background"></div>
 </div>
 <div class="relative z-10 max-w-3xl mx-auto w-full space-y-8">
@@ -203,7 +106,7 @@
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[160px] md:auto-rows-[200px]">
 <!-- Carnes (Large) -->
 <a class="col-span-2 row-span-2 relative rounded-xl overflow-hidden group border border-glass-border bg-surface-container-low hover:border-primary/50 transition-all" href="carnes.html">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105" data-alt="Close up of a premium, perfectly marbled raw ribeye steak resting on a dark slate cutting board. The lighting is dramatic and cinematic, highlighting the rich red color and white marbling of the meat. The background is a very dark, blurred out professional kitchen setting, emphasizing luxury and high culinary standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByXjPPGmiLzUIlNbRqHt_q9YRanv5ydPyr_qEvwAmxBzzSWqGR3PRIdQWEuRU2lMT1bdZFLcVPlkMYIVUB-XC4XYC-2i4mAQhbD_NpHIh3wQZF5astKz9XcoPmKy0kLj2pw8UU7pm-lUIpzsn_quxY2AcQYWcFiYFmLOYUcqJ9FIo6ZGCo2iQ4I8DM_GcrmrWZ62XKfA38VKFwcxgsno3yXpW4PjcpQ5Gm6yQIK_7ixSYvu4Lk47u7pt3R-6o_XUdPdlr3qBD64QE"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105" alt="Close up of a premium, perfectly marbled raw ribeye steak resting on a dark slate cutting board. The lighting is dramatic and cinematic, highlighting the rich red color and white marbling of the meat. The background is a very dark, blurred out professional kitchen setting, emphasizing luxury and high culinary standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByXjPPGmiLzUIlNbRqHt_q9YRanv5ydPyr_qEvwAmxBzzSWqGR3PRIdQWEuRU2lMT1bdZFLcVPlkMYIVUB-XC4XYC-2i4mAQhbD_NpHIh3wQZF5astKz9XcoPmKy0kLj2pw8UU7pm-lUIpzsn_quxY2AcQYWcFiYFmLOYUcqJ9FIo6ZGCo2iQ4I8DM_GcrmrWZ62XKfA38VKFwcxgsno3yXpW4PjcpQ5Gm6yQIK_7ixSYvu4Lk47u7pt3R-6o_XUdPdlr3qBD64QE"/>
 <div class="absolute inset-0 bg-gradient-to-t from-deep-black/90 via-deep-black/20 to-transparent">
 </div>
 <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
@@ -218,7 +121,7 @@
 </a>
 <!-- Bebidas -->
 <a class="col-span-1 row-span-1 relative rounded-xl overflow-hidden group border border-glass-border bg-surface-container-low hover:border-primary/50 transition-all" href="bebidas.html">
-<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" data-alt="A selection of high-end craft beer and wine bottles elegantly displayed on a dark wooden shelf. Soft, moody lighting catches the condensation on the cold bottles and highlights the rich amber and ruby colors of the liquids. The aesthetic is sophisticated and exclusive, fitting a premium dark mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh5Wk9aJ3THvv8ysXkJkaahO1V5bGaSgOXP76aHs-Lawdr035oJLAkTz1-CbB2UthjDeclvhSDXYD9EfGSEbywhUu0Wjnt4zaXjdiFUsjv3DI6Z8dFl_Tq0w0M7cG89FzpAVW3l2RL-COCK1uv7dtR7z_k7GBUVKVirXi-ESkMrDIfKg_syhPt8GTScV8cyoWyOO7k4LePGfbHQ9Ns8UB2c5ps6cJPsZ4vt83u5sL4AhCQiDqxcbEWC5e4wpowx4OARM_HU8HWrlw"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="A selection of high-end craft beer and wine bottles elegantly displayed on a dark wooden shelf. Soft, moody lighting catches the condensation on the cold bottles and highlights the rich amber and ruby colors of the liquids. The aesthetic is sophisticated and exclusive, fitting a premium dark mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh5Wk9aJ3THvv8ysXkJkaahO1V5bGaSgOXP76aHs-Lawdr035oJLAkTz1-CbB2UthjDeclvhSDXYD9EfGSEbywhUu0Wjnt4zaXjdiFUsjv3DI6Z8dFl_Tq0w0M7cG89FzpAVW3l2RL-COCK1uv7dtR7z_k7GBUVKVirXi-ESkMrDIfKg_syhPt8GTScV8cyoWyOO7k4LePGfbHQ9Ns8UB2c5ps6cJPsZ4vt83u5sL4AhCQiDqxcbEWC5e4wpowx4OARM_HU8HWrlw"/>
 <div class="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <h3 class="font-label-md text-label-md text-on-surface">Bebidas</h3>
@@ -226,7 +129,7 @@
 </a>
 <!-- Verduras -->
 <a class="col-span-1 row-span-1 relative rounded-xl overflow-hidden group border border-glass-border bg-surface-container-low hover:border-primary/50 transition-all" href="verduras.html">
-<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" data-alt="Vibrant, fresh organic vegetables including dark leafy greens, bright red tomatoes, and crisp bell peppers arranged aesthetically on a dark slate surface. Dew drops are visible on the greens. The scene is lit with cool, clean light that contrasts beautifully with the dark, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm4fA-A2JyEiN38Y-4LjF51UB1yW62jlHmIId71RZlu-riqiXNIYbm8hnjrAR-qYaEkzzdcwFzGWgd88qWYGod8UhAceH03Idc18kA8pabIr3XXyir1g8WIIpHl48HNOtHsK7FiNmnWxISGu8ElLUED50VybucR_EGbDW6Ru54l6rVB6Vtk0gIZ4YgEaH0Ta67fDH9AfHMDhI4_rqma5lA2lvAYVz9GTpqsIzvp6HcodZaVrm_bu2z4S12V9Cs0l_TZksx-PUfiTU"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="Vibrant, fresh organic vegetables including dark leafy greens, bright red tomatoes, and crisp bell peppers arranged aesthetically on a dark slate surface. Dew drops are visible on the greens. The scene is lit with cool, clean light that contrasts beautifully with the dark, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm4fA-A2JyEiN38Y-4LjF51UB1yW62jlHmIId71RZlu-riqiXNIYbm8hnjrAR-qYaEkzzdcwFzGWgd88qWYGod8UhAceH03Idc18kA8pabIr3XXyir1g8WIIpHl48HNOtHsK7FiNmnWxISGu8ElLUED50VybucR_EGbDW6Ru54l6rVB6Vtk0gIZ4YgEaH0Ta67fDH9AfHMDhI4_rqma5lA2lvAYVz9GTpqsIzvp6HcodZaVrm_bu2z4S12V9Cs0l_TZksx-PUfiTU"/>
 <div class="absolute inset-0 bg-gradient-to-t from-deep-black/80 to-transparent"></div>
 <div class="absolute bottom-4 left-4">
 <h3 class="font-label-md text-label-md text-on-surface">Verduras</h3>
@@ -261,7 +164,7 @@
 <!-- Product Card 1 -->
 <div class="bg-charcoal-surface rounded-xl border border-glass-border overflow-hidden flex flex-col group">
 <div class="relative h-40 md:h-48 bg-surface-container-high overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" data-alt="A perfectly poured glass of amber craft beer with a thick creamy head, sitting next to a premium dark chocolate bar on a dark wooden table. Soft, directional light creates appealing highlights on the glass and chocolate against a very dark, elegant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYPmPMmHuDWsIAGydvzCdw3AzYehc2yV7n_AnJRmvT-8zj4lQUpJ5jJ-xAE2Oe-dE_z48fsy3Tocwk4HfydS5TAw6pq5oQHu-L_vDzr9UvK9p5T8uPN5_5PZU94DgB7Fi7gqTnP3YaJI7SEoaz53U30yhU05ausJwQLvjxFb3j1P-UzjlHCeAINQhnrtTQTP-53pw4dIxAqgEcY4AzmccD9miYJ_0IUwX9inJF4U4BzXyG0KpgZ4Np0YWjyeYgp7o8stWJnVDhsQ"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" alt="A perfectly poured glass of amber craft beer with a thick creamy head, sitting next to a premium dark chocolate bar on a dark wooden table. Soft, directional light creates appealing highlights on the glass and chocolate against a very dark, elegant background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYPmPMmHuDWsIAGydvzCdw3AzYehc2yV7n_AnJRmvT-8zj4lQUpJ5jJ-xAE2Oe-dE_z48fsy3Tocwk4HfydS5TAw6pq5oQHu-L_vDzr9UvK9p5T8uPN5_5PZU94DgB7Fi7gqTnP3YaJI7SEoaz53U30yhU05ausJwQLvjxFb3j1P-UzjlHCeAINQhnrtTQTP-53pw4dIxAqgEcY4AzmccD9miYJ_0IUwX9inJF4U4BzXyG0KpgZ4Np0YWjyeYgp7o8stWJnVDhsQ"/>
 <div class="absolute top-3 left-3 bg-error-red text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
                             Oferta
                         </div>
@@ -287,7 +190,7 @@
 <!-- Product Card 2 -->
 <div class="bg-charcoal-surface rounded-xl border border-glass-border overflow-hidden flex flex-col group">
 <div class="relative h-40 md:h-48 bg-surface-container-high overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" data-alt="A close-up shot of raw, fresh, high-quality ground beef beautifully packaged in a sleek, modern, minimalist black tray. The lighting is pristine and cool, emphasizing the freshness of the meat in a dark, professional culinary environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbXl8wIEH_mKo8ZfymIUlMPyilVRz5FCxgwDIs5biAXNezsHYlirYSURFwEFkUYNNw_dVlJcMFmuoZkKUO9AEYYvGXgk-s-MZYAAUJRhaA8dE61fDBsbebMQFSnvxIQSNHVoX-OaTSA2QZrM5pqg8w5vLs-uNQLu4vF9ti8ojmsga7DICWyT9cx8qUW360GTfmMijHIPTZCVy4tA54HEyOhB8Fu2ZytQlHWlVgi-SiXXVY5RcPpmgZiGpMVkMsbJ5UwRkWjpG4Uo"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" alt="A close-up shot of raw, fresh, high-quality ground beef beautifully packaged in a sleek, modern, minimalist black tray. The lighting is pristine and cool, emphasizing the freshness of the meat in a dark, professional culinary environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbXl8wIEH_mKo8ZfymIUlMPyilVRz5FCxgwDIs5biAXNezsHYlirYSURFwEFkUYNNw_dVlJcMFmuoZkKUO9AEYYvGXgk-s-MZYAAUJRhaA8dE61fDBsbebMQFSnvxIQSNHVoX-OaTSA2QZrM5pqg8w5vLs-uNQLu4vF9ti8ojmsga7DICWyT9cx8qUW360GTfmMijHIPTZCVy4tA54HEyOhB8Fu2ZytQlHWlVgi-SiXXVY5RcPpmgZiGpMVkMsbJ5UwRkWjpG4Uo"/>
 <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/50 backdrop-blur-md flex items-center justify-center border border-glass-border text-on-surface hover:text-error transition-colors">
 <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
 </button>
@@ -307,7 +210,7 @@
 <!-- Product Card 3 -->
 <div class="bg-charcoal-surface rounded-xl border border-glass-border overflow-hidden flex flex-col group hidden md:flex">
 <div class="relative h-40 md:h-48 bg-surface-container-high overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" data-alt="Freshly baked artisan sourdough bread loaf resting on a dark slate surface next to a small dish of golden olive oil. Warm, moody lighting highlights the crusty texture of the bread and the rich color of the oil against a deep charcoal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZYiNAh4hMrJmH4Oq5CiNgDziitlLoynW85qR9CYj_2riNhkqfYIPGCJ3j6s1XoU6Sk0F60Pd0E4s58AYRQ7rFyA952K9JgEy_5V6qw8OS6VWMQLWG5NPQmOu0JQ1V4CgeWkJX-jvAVUjm-oIV2oS6mZqUXVKer3vdEsQHH5iUWaEJyhY7_XbZOEReG27-Ep6jYxzhnoGB_1t-RHrq3lX2IJ0Mr29da-EnWAXYQEspAxXByRpYhmUSp4FIW-ZIu3E7-KRNagJgMbQ"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" alt="Freshly baked artisan sourdough bread loaf resting on a dark slate surface next to a small dish of golden olive oil. Warm, moody lighting highlights the crusty texture of the bread and the rich color of the oil against a deep charcoal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZYiNAh4hMrJmH4Oq5CiNgDziitlLoynW85qR9CYj_2riNhkqfYIPGCJ3j6s1XoU6Sk0F60Pd0E4s58AYRQ7rFyA952K9JgEy_5V6qw8OS6VWMQLWG5NPQmOu0JQ1V4CgeWkJX-jvAVUjm-oIV2oS6mZqUXVKer3vdEsQHH5iUWaEJyhY7_XbZOEReG27-Ep6jYxzhnoGB_1t-RHrq3lX2IJ0Mr29da-EnWAXYQEspAxXByRpYhmUSp4FIW-ZIu3E7-KRNagJgMbQ"/>
 <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/50 backdrop-blur-md flex items-center justify-center border border-glass-border text-on-surface hover:text-error transition-colors">
 <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
 </button>
@@ -327,7 +230,7 @@
 <!-- Product Card 4 -->
 <div class="bg-charcoal-surface rounded-xl border border-glass-border overflow-hidden flex flex-col group hidden lg:flex">
 <div class="relative h-40 md:h-48 bg-surface-container-high overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" data-alt="A dark, moody shot of premium whole bean coffee in a sleek matte black bag, positioned next to a steaming cup of dark espresso on a dark roasted wooden table. The lighting is cinematic, focusing on the rich textures and deep brown/black colors of the coffee." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u5BYctbB2yB8D_eqXzVLfBXy7mS4cNKlt1dnDmsO-qIGIly_HcX5wMK5_OmlFlppYr2x2s5fWIvDzxHPvKBpqObW1elUiRXuHiVv3ytMxMk5x7yTaDqZUW8LqpfCHoAH1-HXWxZ3OGgocbNAStrPNpCtoVcl9EyTwMdsia4d0DNLrRS9z99DSmF1XbU8CnsYEaBOPOaq94XWp0LsyXMPwz5DRbmlQK3oDLrEehfjgR5iCnxx4ouV42bidmIo_NRmksCQvUjNVCQ"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" alt="A dark, moody shot of premium whole bean coffee in a sleek matte black bag, positioned next to a steaming cup of dark espresso on a dark roasted wooden table. The lighting is cinematic, focusing on the rich textures and deep brown/black colors of the coffee." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u5BYctbB2yB8D_eqXzVLfBXy7mS4cNKlt1dnDmsO-qIGIly_HcX5wMK5_OmlFlppYr2x2s5fWIvDzxHPvKBpqObW1elUiRXuHiVv3ytMxMk5x7yTaDqZUW8LqpfCHoAH1-HXWxZ3OGgocbNAStrPNpCtoVcl9EyTwMdsia4d0DNLrRS9z99DSmF1XbU8CnsYEaBOPOaq94XWp0LsyXMPwz5DRbmlQK3oDLrEehfjgR5iCnxx4ouV42bidmIo_NRmksCQvUjNVCQ"/>
 <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/50 backdrop-blur-md flex items-center justify-center border border-glass-border text-on-surface hover:text-error transition-colors">
 <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
 </button>
