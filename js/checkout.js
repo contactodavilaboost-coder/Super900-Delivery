@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Only run if we are on the checkout page
-    const cartWrapper = document.getElementById('cart-drawer-copy');
+    const cartWrapper = document.getElementById('cart-drawer-copy') || document.querySelector('.lg\\:w-\\[480px\\]') || document.querySelector('.h-full.bg-charcoal-surface.flex.flex-col');
     if (!cartWrapper) return;
 
     if (!window.Cart || !window.AirtableConfig) {
