@@ -200,12 +200,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     `;
                 } else {
-                    alert("Hubo un error al procesar tu pedido. Intenta nuevamente.");
+                    alert("Error Airtable: " + JSON.stringify(data.error || "Desconocido"));
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
                 }
             } catch(e) {
-                alert("Error de conexión. Intenta nuevamente.");
+                alert("Error de conexión: " + e.message);
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }
