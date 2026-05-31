@@ -51,9 +51,8 @@ module.exports = async function handler(req, res) {
         const detailsRecords = items.map(item => ({
             fields: {
                 "ID_Pedido": orderId,
-                "Producto": item.name,
-                "Cantidad": item.qty,
-                "Subtotal": item.qty * item.price
+                "Nombre_Producto": item.name,
+                "Cantidad": item.qty
             }
         }));
 
