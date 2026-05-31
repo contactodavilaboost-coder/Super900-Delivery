@@ -1,9 +1,9 @@
-
+new_js = """
 /**
  * Super900 - Checkout Reactive Renderer & Form Submitter
  */
 document.addEventListener('DOMContentLoaded', async () => {
-    const cartWrapper = document.getElementById('cart-drawer-copy') || document.querySelector('.lg\\:w-\\[480px\\]');
+    const cartWrapper = document.getElementById('cart-drawer-copy') || document.querySelector('.lg\\\\:w-\\\\[480px\\\\]');
     if (!cartWrapper) return;
 
     if (!window.AirtableConfig || !window.Cart) return;
@@ -212,3 +212,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 });
+"""
+
+with open('js/checkout.js', 'w', encoding='utf-8') as f:
+    f.write(new_js)
+print("Updated js/checkout.js")

@@ -110,7 +110,7 @@ class ShoppingCart {
                     <h2 class="font-headline-md text-headline-md text-on-surface m-0">Tu Carrito</h2>
                     <span id="drawer-item-count" class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">0</span>
                 </div>
-                <button id="close-drawer-btn" class="text-on-surface-variant hover:text-error transition-colors p-1">
+                <button class="text-on-surface-variant hover:text-error transition-colors p-1 mr-2" title="Vaciar carrito" onclick="if(confirm('¿Seguro que deseas vaciar el carrito?')) window.Cart.clear()"><span class="material-symbols-outlined">delete_sweep</span></button><button id="close-drawer-btn" class="text-on-surface-variant hover:text-error transition-colors p-1">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>

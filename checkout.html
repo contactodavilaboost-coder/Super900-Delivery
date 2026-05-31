@@ -42,6 +42,13 @@
 <div class="flex-1 p-6 lg:p-12 overflow-y-auto bg-surface-container-lowest">
 <div class="max-w-3xl mx-auto">
 <header class="mb-10">
+
+<div class="mb-4">
+    <a href="index.html" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-sm font-label-md">
+        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+        Volver a la tienda
+    </a>
+</div>
 <h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Finalizar Pedido</h1>
 <p class="text-on-surface-variant">Completa tu pedido proporcionando tus datos a continuación.</p>
 </header>
@@ -51,15 +58,15 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="block font-label-md text-on-surface-variant">Nombre Completo</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="cliente_nombre" placeholder="John Doe" type="text" required/>
 </div>
 <div class="space-y-2">
 <label class="block font-label-md text-on-surface-variant">Correo Electrónico</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com" type="email"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="cliente_email" placeholder="john@example.com" type="email"/>
 </div>
 <div class="md:col-span-2 space-y-2">
 <label class="block font-label-md text-on-surface-variant">Número de Teléfono</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="+58 412 000 0000" type="tel"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="cliente_telefono" placeholder="+58 412 000 0000" type="tel" required/>
 </div>
 </div>
 </section>
@@ -68,47 +75,63 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="md:col-span-2 space-y-2">
 <label class="block font-label-md text-on-surface-variant">Dirección (Calle/Av, Casa/Apto)</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Av. Principal, Urb. Puerta Maraven" type="text"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="dir_calle" placeholder="Av. Principal, Urb. Puerta Maraven" type="text" required/>
 </div>
 <div class="space-y-2">
 <label class="block font-label-md text-on-surface-variant">Ciudad</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Punto Fijo"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="dir_ciudad" type="text" value="Punto Fijo" required/>
 </div>
 <div class="space-y-2">
 <label class="block font-label-md text-on-surface-variant">Punto de Referencia / Instrucciones</label>
-<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cerca de..." type="text"/>
+<input class="w-full bg-surface-container-low border-glass-border rounded-lg p-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="dir_ref" placeholder="Cerca de..." type="text"/>
 </div>
 </div>
 </section>
 <section>
 <h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2"> 3. Método de Pago</h2>
+
 <div class="space-y-6">
-<div class="p-6 bg-surface-container-low border border-glass-border rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-secondary">smartphone</span>
-<h3 class="font-label-md text-on-surface">Datos de Pago Móvil</h3>
+    <div class="flex gap-4 mb-4">
+        <label class="flex items-center gap-2 text-on-surface cursor-pointer">
+            <input type="radio" name="metodo_pago" value="Pago Movil" checked class="text-primary focus:ring-primary"> Pago Móvil
+        </label>
+        <label class="flex items-center gap-2 text-on-surface cursor-pointer">
+            <input type="radio" name="metodo_pago" value="Zelle" class="text-primary focus:ring-primary"> Zelle
+        </label>
+        <label class="flex items-center gap-2 text-on-surface cursor-pointer">
+            <input type="radio" name="metodo_pago" value="Efectivo" class="text-primary focus:ring-primary"> Efectivo
+        </label>
+    </div>
+    
+    <div id="panel-pagomovil" class="p-6 bg-surface-container-low border border-glass-border rounded-xl">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-secondary">smartphone</span>
+            <h3 class="font-label-md text-on-surface">Datos de Pago Móvil</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <input id="pm_banco" class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Banco Origen" type="text"/>
+            <input id="pm_ref" class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Nro de Referencia" type="text"/>
+            <input id="pm_tlf" class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Teléfono Emisor" type="text"/>
+        </div>
+    </div>
+    
+    <div id="panel-zelle" class="p-6 bg-surface-container border border-primary/20 rounded-xl hidden">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-secondary">payments</span>
+            <h3 class="font-label-md text-on-surface">Zelle</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input id="zelle_correo" class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Correo Titular" type="email"/>
+            <input id="zelle_ref" class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Número de Confirmación" type="text"/>
+        </div>
+    </div>
+    
+    <div class="p-4 bg-surface-container-highest/30 rounded-lg flex items-start gap-3">
+        <span class="material-symbols-outlined text-on-surface-variant">info</span>
+        <p class="text-xs text-on-surface-variant">Para Efectivo, por favor asegúrate de tener el monto exacto al momento de la entrega.</p>
+    </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Nombre del Banco" type="text"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Cédula de Identidad" type="text"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Teléfono" type="text"/>
-</div>
-</div>
-<div class="p-6 bg-surface-container border border-primary/20 rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-secondary">payments</span>
-<h3 class="font-label-md text-on-surface">Zelle</h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Correo Zelle" type="email"/>
-<input class="bg-charcoal-surface border-glass-border rounded-lg p-2.5 text-sm" placeholder="Número de Referencia" type="text"/>
-</div>
-</div>
-<div class="p-4 bg-surface-container-highest/30 rounded-lg flex items-start gap-3">
-<span class="material-symbols-outlined text-on-surface-variant">info</span>
-<p class="text-xs text-on-surface-variant">Para Efectivo, por favor asegúrate de tener el monto exacto al momento de la entrega.</p>
-</div>
-</div>
+
 </section>
 </form>
 </div>

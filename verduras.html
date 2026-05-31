@@ -50,7 +50,7 @@
 </button>
 <button class="p-2 hover:text-primary transition-colors duration-200 rounded-full hover:bg-surface-variant/50 relative bg-surface-variant/30 text-primary" onclick="window.Cart.openDrawer()">
 <span class="material-symbols-outlined">shopping_cart</span>
-<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+<span class="cart-badge-counter absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" style="display: none;">0</span>
 </button>
 </div>
 </header>
@@ -148,12 +148,7 @@
 </article>
 </div>
 <!-- Floating Checkout Action (Desktop) -->
-<div class="hidden lg:flex fixed bottom-8 right-8 z-50">
-<button class="bg-secondary text-on-secondary px-8 py-4 rounded-full font-headline-md text-[18px] font-bold shadow-[0_10px_25px_rgba(255,184,102,0.3)] hover:scale-105 transition-transform flex items-center gap-3">
-<span class="material-symbols-outlined">shopping_basket</span>
-                    Ver Carrito (3)
-                </button>
-</div>
+
 </main>
 </div>
 <!-- BottomNavBar (Mobile Only) -->
@@ -172,7 +167,7 @@
 <a class="flex flex-col items-center justify-center text-on-surface-variant active:bg-surface-variant/30 rounded-lg p-1 transition-colors relative" href="javascript:void(0)" onclick="window.Cart.openDrawer()">
 <div class="relative">
 <span class="material-symbols-outlined mb-1">shopping_basket</span>
-<span class="absolute -top-1 right-0 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+<span class="cart-badge-counter absolute -top-1 right-0 bg-secondary text-on-secondary text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" style="display: none;">0</span>
 </div>
 <span class="font-label-sm text-label-sm">Cart</span>
 <span class="cart-badge-counter absolute top-0 right-2 bg-error text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" style="display: none;">0</span></a>
