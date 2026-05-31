@@ -24,7 +24,9 @@ module.exports = async function handler(req, res) {
                         "Direccion_Entrega": order.address,
                         "Metodo_Pago": order.paymentMethod,
                         "Datos_Pago": order.paymentData,
-                        "Total_Factura": parseFloat(order.totalUSD)
+                        "Total_Factura": parseFloat(order.totalUSD),
+                        "Total_Bolivares": parseFloat(order.totalBs),
+                        "Estado_Pago": "No Verificado"
                         // Removed Total_Bolivares and Estado for now to prevent unknown field errors
                     }
                 }
