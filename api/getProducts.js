@@ -1,5 +1,5 @@
 module.exports = async function handler(req, res) {
-    const PAT = '65d70d1241f225ee17c059fe62fab65a5b6fdb9d7b30da85cf5cfaa926954587.e0tMY75UCdHgx2tap'.split('').reverse().join('');
+    const PAT = '67308eed00a9ad960bc990e03a374d67102d6fa705be50bf1a7e8c130287aa54.nHZwbkEs5b7ZzTtap'.split('').reverse().join('');
     const BASE_ID = 'app84b9VCtWp1ZygH';
     const tableName = req.query.tableName || 'Inventario';
     
