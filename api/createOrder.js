@@ -46,13 +46,16 @@ module.exports = async function handler(req, res) {
             const err = await masterResponse.text();
             throw new Error('Failed to create Master Record: ' + err);
         }
+        const masterJson = await masterResponse.json();
+        const masterRecordId = masterJson.records[0].id;
 
         // 2. Create Pedidos_Detalle
         const detailsRecords = items.map(item => ({
             fields: {
-                "ID_Pedido": orderId,
+                "ID_Pedido": [masterRecordId],
                 "Nombre_Producto": item.name,
-                "Cantidad": item.qty
+                "Cantidad": item.qty,
+                "Subtotal_Linea": item.qty * item.price
             }
         }));
 
@@ -64,7 +67,7 @@ module.exports = async function handler(req, res) {
                     'Authorization': `Bearer ${process.env.AIRTABLE_PAT || PAT}`,
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ records: chunk })
+                body: JSON.stringify({ typecast: true, records: chunk })
             });
         }
 
