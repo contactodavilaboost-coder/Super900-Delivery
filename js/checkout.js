@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Handle Form Submission
-    const submitBtn = cartWrapper.querySelector('button');
+    const submitBtn = document.getElementById('submit-order-btn');
     if (submitBtn) {
         submitBtn.type = "button"; // prevent accidental form submit
         submitBtn.addEventListener('click', async () => {
